@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reino — Privacy Policy | سياسة الخصوصية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F7F2EA;
+    --espresso: #1C1008;
+    --roast: #3D1F0A;
+    --caramel: #C07D3A;
+    --latte: #D4A96A;
+    --foam: #EDE5D4;
+    --steam: #F0EBE1;
+    --muted: #8A7560;
+    --border: #D9CEBC;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--cream);
+    color: var(--espresso);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+    min-height: 100vh;
+  }
+
+  /* ── LANG TOGGLE ── */
+  .lang-toggle {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 100;
+    display: flex;
+    background: var(--espresso);
+    border-radius: 100px;
+    padding: 4px;
+    gap: 2px;
+  }
+  .lang-btn {
+    padding: 6px 18px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    transition: all 0.25s ease;
+    background: transparent;
+    color: var(--latte);
+  }
+  .lang-btn.active {
+    background: var(--caramel);
+    color: var(--cream);
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--espresso);
+    padding: 100px 40px 70px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: 50%; transform: translateX(-50%);
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(192,125,58,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--caramel);
+    margin-bottom: 20px;
+  }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 600;
+    color: var(--cream);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--latte);
+  }
+  .hero-sub {
+    font-size: 14px;
+    color: var(--muted);
+    letter-spacing: 0.02em;
+  }
+  .hero-divider {
+    width: 48px;
+    height: 2px;
+    background: var(--caramel);
+    margin: 28px auto 0;
+    border-radius: 2px;
+  }
+
+  /* ── CONTENT ── */
+  .wrapper {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 64px 32px 100px;
+  }
+
+  .section {
+    margin-bottom: 52px;
+    padding-bottom: 52px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .section-number {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--caramel);
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--roast);
+    margin-bottom: 20px;
+    line-height: 1.25;
+  }
+
+  p {
+    font-size: 15.5px;
+    color: #3A2D1E;
+    margin-bottom: 16px;
+    line-height: 1.85;
+  }
+  p:last-child { margin-bottom: 0; }
+
+  ul {
+    list-style: none;
+    margin: 16px 0 20px;
+  }
+  ul li {
+    font-size: 15.5px;
+    color: #3A2D1E;
+    padding: 8px 0 8px 28px;
+    position: relative;
+    border-bottom: 1px solid var(--steam);
+    line-height: 1.7;
+  }
+  ul li:last-child { border-bottom: none; }
+  ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--caramel);
+    font-weight: 500;
+  }
+
+  .highlight-box {
+    background: var(--foam);
+    border-left: 3px solid var(--caramel);
+    padding: 20px 24px;
+    border-radius: 0 8px 8px 0;
+    margin: 24px 0;
+  }
+  .highlight-box p {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .contact-card {
+    background: var(--espresso);
+    border-radius: 12px;
+    padding: 32px;
+    text-align: center;
+    margin-top: 24px;
+  }
+  .contact-card p { color: var(--foam); margin-bottom: 8px; }
+  .contact-card a {
+    color: var(--latte);
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    border-bottom: 1px solid rgba(212,169,106,0.4);
+    padding-bottom: 2px;
+    transition: border-color 0.2s;
+  }
+  .contact-card a:hover { border-color: var(--latte); }
+
+  .effective-date {
+    text-align: center;
+    font-size: 13px;
+    color: var(--muted);
+    padding-top: 48px;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--espresso);
+    text-align: center;
+    padding: 28px;
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+
+  /* ── ARABIC OVERRIDES ── */
+  body.ar {
+    font-family: 'Noto Naskh Arabic', serif;
+    direction: rtl;
+  }
+  body.ar .hero { direction: rtl; }
+  body.ar h2 { font-family: 'Noto Naskh Arabic', serif; font-size: 24px; }
+  body.ar p, body.ar ul li { font-family: 'Noto Naskh Arabic', serif; font-size: 16px; line-height: 2.1; }
+  body.ar .highlight-box { border-left: none; border-right: 3px solid var(--caramel); border-radius: 8px 0 0 8px; }
+  body.ar ul li { padding: 8px 28px 8px 0; }
+  body.ar ul li::before { left: auto; right: 0; }
+  body.ar .lang-toggle { right: auto; left: 24px; }
+
+  /* ── SHOW/HIDE LANG CONTENT ── */
+  .en-content { display: block; }
+  .ar-content { display: none; }
+  body.ar .en-content { display: none; }
+  body.ar .ar-content { display: block; }
+  body.ar html { direction: rtl; }
+</style>
+</head>
+<body id="body">
+
+<!-- Language Toggle -->
+<div class="lang-toggle">
+  <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+  <button class="lang-btn" id="btn-ar" onclick="setLang('ar')">ع</button>
+</div>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-eyebrow en-content">Reino · Privacy Policy</div>
+  <div class="hero-eyebrow ar-content">رينو · سياسة الخصوصية</div>
+
+  <h1 class="hero-title en-content">Your privacy,<br><em>thoughtfully kept.</em></h1>
+  <h1 class="hero-title ar-content" style="font-family:'Noto Naskh Arabic',serif">خصوصيتك،<br><em>محفوظة بعناية.</em></h1>
+
+  <p class="hero-sub en-content">Effective date: May 2025 · Applies to Reino iOS app</p>
+  <p class="hero-sub ar-content" style="font-family:'Noto Naskh Arabic',serif">تاريخ النفاذ: مايو 2025 · يسري على تطبيق رينو لنظام iOS</p>
+  <div class="hero-divider"></div>
+</div>
+
+<!-- ════════════════════════════════════════ ENGLISH ════════════════════════════════════════ -->
+<div class="en-content">
+<div class="wrapper">
+
+  <div class="section">
+    <div class="section-number">01</div>
+    <h2>About Reino</h2>
+    <p>Reino is a social coffee discovery app designed for specialty coffee enthusiasts across Saudi Arabia. It lets you discover cafes in cities like Riyadh, Jeddah, and Khobar; check in when you visit; rate and review your experience; follow friends; send direct messages; and earn badges for coffee milestones.</p>
+    <p>Reino is operated independently and is not affiliated with any third-party rating platform. Everything — the app, the API, and the database — is built and maintained in-house.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">02</div>
+    <h2>What We Collect</h2>
+    <p>We collect only what is necessary to make Reino work:</p>
+    <ul>
+      <li><strong>Account information</strong> — your display name and email address when you register.</li>
+      <li><strong>Precise location</strong> — your GPS coordinates at the moment of a check-in, used solely to verify you are within 500 m of a cafe. We do not track your location in the background or at any other time.</li>
+      <li><strong>User-generated content</strong> — reviews, ratings, check-ins, photos, and direct messages you choose to create.</li>
+      <li><strong>Usage data</strong> — badges earned, cafes visited, friends followed. Used to power your profile and city leaderboards.</li>
+      <li><strong>Push notification token</strong> — if you grant permission, used only to send you social notifications (new followers, DMs, badge awards).</li>
+    </ul>
+    <div class="highlight-box">
+      <p>We do not collect payment information, health data, browsing history, contacts, or any data unrelated to your coffee activity on Reino.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-number">03</div>
+    <h2>How We Use Your Data</h2>
+    <p>Your data is used exclusively to operate and improve Reino:</p>
+    <ul>
+      <li>Authenticate your account and keep your session secure.</li>
+      <li>Verify GPS proximity during a cafe check-in.</li>
+      <li>Display your reviews, check-ins, and profile to your followers.</li>
+      <li>Power city rankings, cafe leaderboards, and badge achievements.</li>
+      <li>Deliver push notifications you have consented to receive.</li>
+      <li>Moderate reported content to maintain a safe community.</li>
+    </ul>
+    <p>We do not sell your data, share it with advertisers, or use it for profiling or targeted advertising — ever.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">04</div>
+    <h2>Data Sharing</h2>
+    <p>We do not sell or rent your personal information to any third party. Limited sharing occurs only in these cases:</p>
+    <ul>
+      <li><strong>Other Reino users</strong> — your display name, profile photo, reviews, and check-ins are visible to users who follow you, consistent with how a social app works.</li>
+      <li><strong>Infrastructure providers</strong> — our database and API are hosted on services that process data on our behalf under strict confidentiality obligations.</li>
+      <li><strong>Legal requirements</strong> — if required by applicable Saudi law or a valid legal order.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-number">05</div>
+    <h2>Location Data</h2>
+    <p>Reino requests your precise location only at the moment you initiate a check-in, using the "While Using the App" permission. We do not request background location access. The GPS coordinates are used only to confirm your presence within 500 m of the selected cafe and are not stored as a trackable history of your movements.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">06</div>
+    <h2>User-Generated Content & Community Safety</h2>
+    <p>Reino is a community built around respect for the coffee culture and its people. We have zero tolerance for abusive, hateful, or harmful content.</p>
+    <ul>
+      <li>Every review, check-in, and direct message can be <strong>reported</strong> directly within the app.</li>
+      <li>Any user can be <strong>blocked</strong> from your profile and feed at any time.</li>
+      <li>Reported content is reviewed and actioned by Reino's moderation team.</li>
+      <li>Accounts found in violation of our community standards may be suspended or permanently removed.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-number">07</div>
+    <h2>Data Retention & Account Deletion</h2>
+    <p>You may delete your Reino account at any time from <strong>Settings → Delete Account</strong>. When you do:</p>
+    <ul>
+      <li>Your account is immediately deactivated and hidden from all other users.</li>
+      <li>Your email address, display name, biography, and profile photo are permanently erased from our systems.</li>
+      <li>Your authentication credentials are wiped.</li>
+      <li>Reviews and check-ins you created will be anonymised and may remain on cafe pages to preserve the integrity of ratings.</li>
+    </ul>
+    <p>We retain server logs for up to 90 days for security and debugging purposes, after which they are permanently deleted.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">08</div>
+    <h2>Your Rights</h2>
+    <p>You have the right to access, correct, or delete your personal data at any time. To exercise these rights, use the in-app tools in Settings or contact us at the address below. We will respond within 30 days.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">09</div>
+    <h2>Children's Privacy</h2>
+    <p>Reino is not intended for children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has created an account, please contact us and we will remove it promptly.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">10</div>
+    <h2>Changes to This Policy</h2>
+    <p>If we make material changes to this Privacy Policy, we will notify you via the app and update the effective date at the top of this page. Continued use of Reino after a change constitutes acceptance of the revised policy.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">11</div>
+    <h2>Contact Us</h2>
+    <p>For any privacy-related questions, data access requests, or content reports, please reach us at:</p>
+    <div class="contact-card">
+      <p>Privacy enquiries</p>
+      <a href="mailto:privacy@reino.app">privacy@reino.app</a>
+    </div>
+  </div>
+
+  <div class="effective-date">Last updated: May 2025</div>
+
+</div>
+</div>
+
+<!-- ════════════════════════════════════════ ARABIC ════════════════════════════════════════ -->
+<div class="ar-content">
+<div class="wrapper">
+
+  <div class="section">
+    <div class="section-number">٠١</div>
+    <h2>عن تطبيق رينو</h2>
+    <p>رينو هو تطبيق اجتماعي لاكتشاف القهوة المتخصصة، صُمِّم لعشاق القهوة في أرجاء المملكة العربية السعودية. يتيح لك اكتشاف المقاهي في مدن كالرياض وجدة والخبر، وتسجيل زياراتك، وتقييم تجربتك ومراجعتها، ومتابعة أصدقائك، وتبادل الرسائل المباشرة، والحصول على شارات مقابل إنجازاتك في رحلة القهوة.</p>
+    <p>يُدار رينو بصورة مستقلة ولا يرتبط بأي منصة تقييم خارجية. كل شيء — التطبيق والواجهة البرمجية وقاعدة البيانات — مبنيٌّ ومُدار داخلياً.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">٠٢</div>
+    <h2>ما الذي نجمعه</h2>
+    <p>نجمع فقط ما هو ضروري لتشغيل رينو:</p>
+    <ul>
+      <li><strong>معلومات الحساب</strong> — اسمك المعروض وعنوان بريدك الإلكتروني عند التسجيل.</li>
+      <li><strong>الموقع الجغرافي الدقيق</strong> — إحداثيات GPS لحظة تسجيل الحضور، وتُستخدم حصراً للتحقق من وجودك ضمن نطاق 500 متر من المقهى. لا نتتبع موقعك في الخلفية أو في أي وقت آخر.</li>
+      <li><strong>المحتوى الذي تنشئه</strong> — المراجعات والتقييمات وتسجيلات الحضور والصور والرسائل المباشرة التي تختار إنشاءها.</li>
+      <li><strong>بيانات النشاط</strong> — الشارات المحققة والمقاهي المزارة والأصدقاء المتابَعون، وتُستخدم لتشغيل ملفك الشخصي وقوائم المدن.</li>
+      <li><strong>رمز الإشعارات الفورية</strong> — إن منحت الإذن، يُستخدم فقط لإرسال الإشعارات الاجتماعية (متابعون جدد، رسائل مباشرة، شارات).</li>
+    </ul>
+    <div class="highlight-box">
+      <p>لا نجمع معلومات الدفع أو البيانات الصحية أو سجل التصفح أو جهات الاتصال أو أي بيانات لا علاقة لها بنشاطك على رينو.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-number">٠٣</div>
+    <h2>كيف نستخدم بياناتك</h2>
+    <p>تُستخدم بياناتك حصراً لتشغيل رينو وتحسينه:</p>
+    <ul>
+      <li>التحقق من هويتك والحفاظ على أمان جلستك.</li>
+      <li>التحقق من القرب الجغرافي عند تسجيل الحضور في المقهى.</li>
+      <li>عرض مراجعاتك وتسجيلات حضورك وملفك الشخصي لمتابعيك.</li>
+      <li>تشغيل تصنيفات المدن وقوائم المقاهي وإنجازات الشارات.</li>
+      <li>إرسال الإشعارات التي وافقت على تلقيها.</li>
+      <li>مراجعة المحتوى المُبلَّغ عنه للحفاظ على مجتمع آمن.</li>
+    </ul>
+    <p>لا نبيع بياناتك ولا نشاركها مع المعلنين ولا نستخدمها للتنميط أو الإعلان المستهدف — في أي وقت.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">٠٤</div>
+    <h2>مشاركة البيانات</h2>
+    <p>لا نبيع معلوماتك الشخصية ولا نؤجرها لأي طرف ثالث. تقتصر المشاركة المحدودة على الحالات التالية:</p>
+    <ul>
+      <li><strong>مستخدمو رينو الآخرون</strong> — اسمك المعروض وصورتك الشخصية ومراجعاتك وتسجيلات حضورك مرئية للمتابعين، وهذا متسق مع طبيعة التطبيقات الاجتماعية.</li>
+      <li><strong>مزودو البنية التحتية</strong> — تتم معالجة البيانات من قِبل خدمات الاستضافة وفق التزامات سرية صارمة.</li>
+      <li><strong>المتطلبات القانونية</strong> — إذا اقتضى ذلك القانون السعودي المعمول به أو أمرٌ قانوني صالح.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-number">٠٥</div>
+    <h2>بيانات الموقع الجغرافي</h2>
+    <p>يطلب رينو موقعك الجغرافي الدقيق فقط لحظة بدء تسجيل الحضور، باستخدام إذن "أثناء استخدام التطبيق". لا نطلب الوصول إلى الموقع في الخلفية. تُستخدم إحداثيات GPS فقط للتأكد من وجودك ضمن 500 متر من المقهى المحدد، ولا تُخزَّن كسجل تتبع لتنقلاتك.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">٠٦</div>
+    <h2>المحتوى الذي ينشئه المستخدمون وسلامة المجتمع</h2>
+    <p>رينو مجتمع مبني على الاحترام لثقافة القهوة وأهلها. نتبع سياسة صفر تسامح مع المحتوى المسيء أو الكراهية أو الأذى.</p>
+    <ul>
+      <li>يمكن <strong>الإبلاغ</strong> عن أي مراجعة أو تسجيل حضور أو رسالة مباشرة مباشرةً من داخل التطبيق.</li>
+      <li>يمكن <strong>حظر</strong> أي مستخدم من ملفك الشخصي وخلاصتك في أي وقت.</li>
+      <li>يراجع فريق إدارة رينو المحتوى المُبلَّغ عنه ويتخذ الإجراءات اللازمة.</li>
+      <li>الحسابات التي تنتهك معايير المجتمع قد تُعلَّق أو تُحذف نهائياً.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-number">٠٧</div>
+    <h2>الاحتفاظ بالبيانات وحذف الحساب</h2>
+    <p>يمكنك حذف حساب رينو في أي وقت من <strong>الإعدادات ← حذف الحساب</strong>. عند الحذف:</p>
+    <ul>
+      <li>يُوقَف حسابك فوراً ويختفي عن جميع المستخدمين.</li>
+      <li>تُمسح عنوان بريدك الإلكتروني واسمك ونبذتك الشخصية وصورتك نهائياً من أنظمتنا.</li>
+      <li>تُحذف بيانات الاعتماد الخاصة بك.</li>
+      <li>قد تبقى المراجعات وتسجيلات الحضور مجهولة المصدر على صفحات المقاهي للحفاظ على سلامة التقييمات.</li>
+    </ul>
+    <p>نحتفظ بسجلات الخوادم لمدة تصل إلى 90 يوماً لأغراض الأمان وإصلاح الأخطاء، وتُحذف بعدها نهائياً.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">٠٨</div>
+    <h2>حقوقك</h2>
+    <p>يحق لك الوصول إلى بياناتك الشخصية وتصحيحها أو حذفها في أي وقت. لممارسة هذه الحقوق، استخدم أدوات التطبيق في الإعدادات أو تواصل معنا على العنوان أدناه. سنرد خلال 30 يوماً.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">٠٩</div>
+    <h2>خصوصية الأطفال</h2>
+    <p>لا يستهدف رينو الأطفال دون سن 13 عاماً ولا يجمع عن سابق علم معلومات شخصية منهم. إن كنت تعتقد أن طفلاً أنشأ حساباً، فيرجى التواصل معنا وسنحذفه فوراً.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">١٠</div>
+    <h2>التغييرات على هذه السياسة</h2>
+    <p>إذا أجرينا تغييرات جوهرية على سياسة الخصوصية، سنخطرك عبر التطبيق ونحدّث تاريخ النفاذ أعلى هذه الصفحة. استمرارك في استخدام رينو بعد التغيير يُعدّ قبولاً للسياسة المعدَّلة.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">١١</div>
+    <h2>تواصل معنا</h2>
+    <p>لأي استفسارات تتعلق بالخصوصية أو طلبات الوصول إلى البيانات أو الإبلاغ عن المحتوى، يرجى التواصل معنا على:</p>
+    <div class="contact-card">
+      <p>استفسارات الخصوصية</p>
+      <a href="mailto:privacy@reino.app">privacy@reino.app</a>
+    </div>
+  </div>
+
+  <div class="effective-date">آخر تحديث: مايو 2025</div>
+
+</div>
+</div>
+
+<footer>
+  <span class="en-content">© 2025 Reino · All rights reserved</span>
+  <span class="ar-content" style="font-family:'Noto Naskh Arabic',serif">© 2025 رينو · جميع الحقوق محفوظة</span>
+</footer>
+
+<script>
+  function setLang(lang) {
+    const body = document.getElementById('body');
+    const btnEn = document.getElementById('btn-en');
+    const btnAr = document.getElementById('btn-ar');
+    if (lang === 'ar') {
+      body.classList.add('ar');
+      document.documentElement.setAttribute('dir', 'rtl');
+      document.documentElement.setAttribute('lang', 'ar');
+      btnAr.classList.add('active');
+      btnEn.classList.remove('active');
+    } else {
+      body.classList.remove('ar');
+      document.documentElement.setAttribute('dir', 'ltr');
+      document.documentElement.setAttribute('lang', 'en');
+      btnEn.classList.add('active');
+      btnAr.classList.remove('active');
+    }
+  }
+</script>
+</body>
+</html>

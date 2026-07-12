@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reino — Terms of Service | شروط الخدمة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F7F2EA;
+    --espresso: #1C1008;
+    --roast: #3D1F0A;
+    --caramel: #C07D3A;
+    --latte: #D4A96A;
+    --foam: #EDE5D4;
+    --steam: #F0EBE1;
+    --muted: #8A7560;
+    --border: #D9CEBC;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--cream);
+    color: var(--espresso);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+    min-height: 100vh;
+  }
+
+  .lang-toggle {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 100;
+    display: flex;
+    background: var(--espresso);
+    border-radius: 100px;
+    padding: 4px;
+    gap: 2px;
+  }
+  .lang-btn {
+    padding: 6px 18px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    transition: all 0.25s ease;
+    background: transparent;
+    color: var(--latte);
+  }
+  .lang-btn.active { background: var(--caramel); color: var(--cream); }
+
+  .hero {
+    background: var(--espresso);
+    padding: 100px 40px 70px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: 50%; transform: translateX(-50%);
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(192,125,58,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--caramel);
+    margin-bottom: 20px;
+  }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 600;
+    color: var(--cream);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .hero-title em { font-style: italic; color: var(--latte); }
+  .hero-sub { font-size: 14px; color: var(--muted); letter-spacing: 0.02em; }
+  .hero-divider {
+    width: 48px; height: 2px;
+    background: var(--caramel);
+    margin: 28px auto 0;
+    border-radius: 2px;
+  }
+
+  .wrapper {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 64px 32px 100px;
+  }
+
+  .section {
+    margin-bottom: 52px;
+    padding-bottom: 52px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section:last-child { border-bottom: none; margin-bottom: 0; }
+
+  .section-number {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--caramel);
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--roast);
+    margin-bottom: 20px;
+    line-height: 1.25;
+  }
+
+  p {
+    font-size: 15.5px;
+    color: #3A2D1E;
+    margin-bottom: 16px;
+    line-height: 1.85;
+  }
+  p:last-child { margin-bottom: 0; }
+
+  ul {
+    list-style: none;
+    margin: 16px 0 20px;
+  }
+  ul li {
+    font-size: 15.5px;
+    color: #3A2D1E;
+    padding: 8px 0 8px 28px;
+    position: relative;
+    border-bottom: 1px solid var(--steam);
+    line-height: 1.7;
+  }
+  ul li:last-child { border-bottom: none; }
+  ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--caramel);
+    font-weight: 500;
+  }
+
+  .highlight-box {
+    background: var(--foam);
+    border-left: 3px solid var(--caramel);
+    padding: 20px 24px;
+    border-radius: 0 8px 8px 0;
+    margin: 24px 0;
+  }
+  .highlight-box p { margin: 0; font-size: 15px; }
+
+  .zero-tolerance {
+    background: var(--roast);
+    border-radius: 12px;
+    padding: 32px;
+    margin: 24px 0;
+  }
+  .zero-tolerance .zt-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--caramel);
+    margin-bottom: 12px;
+  }
+  .zero-tolerance p {
+    color: var(--foam);
+    font-size: 16px;
+    line-height: 1.75;
+    margin: 0;
+  }
+
+  .contact-card {
+    background: var(--espresso);
+    border-radius: 12px;
+    padding: 32px;
+    text-align: center;
+    margin-top: 24px;
+  }
+  .contact-card p { color: var(--foam); margin-bottom: 8px; }
+  .contact-card a {
+    color: var(--latte);
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    border-bottom: 1px solid rgba(212,169,106,0.4);
+    padding-bottom: 2px;
+    transition: border-color 0.2s;
+  }
+  .contact-card a:hover { border-color: var(--latte); }
+
+  .effective-date {
+    text-align: center;
+    font-size: 13px;
+    color: var(--muted);
+    padding-top: 48px;
+    letter-spacing: 0.04em;
+  }
+
+  footer {
+    background: var(--espresso);
+    text-align: center;
+    padding: 28px;
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+
+  /* Arabic */
+  body.ar { font-family: 'Noto Naskh Arabic', serif; direction: rtl; }
+  body.ar .hero { direction: rtl; }
+  body.ar h2 { font-family: 'Noto Naskh Arabic', serif; font-size: 24px; }
+  body.ar p, body.ar ul li { font-family: 'Noto Naskh Arabic', serif; font-size: 16px; line-height: 2.1; }
+  body.ar .highlight-box { border-left: none; border-right: 3px solid var(--caramel); border-radius: 8px 0 0 8px; }
+  body.ar ul li { padding: 8px 28px 8px 0; }
+  body.ar ul li::before { left: auto; right: 0; }
+  body.ar .lang-toggle { right: auto; left: 24px; }
+  body.ar .zero-tolerance p { font-family: 'Noto Naskh Arabic', serif; }
+
+  .en-content { display: block; }
+  .ar-content { display: none; }
+  body.ar .en-content { display: none; }
+  body.ar .ar-content { display: block; }
+</style>
+</head>
+<body id="body">
+
+<div class="lang-toggle">
+  <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+  <button class="lang-btn" id="btn-ar" onclick="setLang('ar')">ع</button>
+</div>
+
+<div class="hero">
+  <div class="hero-eyebrow en-content">Reino · Terms of Service</div>
+  <div class="hero-eyebrow ar-content">رينو · شروط الخدمة</div>
+  <h1 class="hero-title en-content">A space built on<br><em>respect & coffee.</em></h1>
+  <h1 class="hero-title ar-content" style="font-family:'Noto Naskh Arabic',serif">مساحة مبنية على<br><em>الاحترام والقهوة.</em></h1>
+  <p class="hero-sub en-content">Effective date: May 2025 · Applies to Reino iOS app</p>
+  <p class="hero-sub ar-content" style="font-family:'Noto Naskh Arabic',serif">تاريخ النفاذ: مايو 2025 · يسري على تطبيق رينو لنظام iOS</p>
+  <div class="hero-divider"></div>
+</div>
+
+<!-- ══════════════════════ ENGLISH ══════════════════════ -->
+<div class="en-content">
+<div class="wrapper">
+
+  <div class="section">
+    <div class="section-number">01</div>
+    <h2>Agreement to These Terms</h2>
+    <p>By creating an account or using Reino, you agree to these Terms of Service. If you do not agree, do not use the app. These terms form a binding agreement between you and Reino. We may update them from time to time — we will notify you in-app when we do, and continued use constitutes acceptance.</p>
+    <p>Reino is a social coffee discovery platform for specialty coffee enthusiasts across Saudi Arabia. It is not intended for commercial solicitation, advertising, or any purpose other than personal, social engagement with the coffee community.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">02</div>
+    <h2>Eligibility</h2>
+    <p>You must be at least 13 years old to use Reino. By registering, you confirm that you meet this requirement. Accounts found to belong to children under 13 will be removed without notice.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">03</div>
+    <h2>Your Account</h2>
+    <p>You are responsible for keeping your account credentials secure. Do not share your password. You are responsible for all activity that occurs under your account. If you suspect unauthorised access, contact us immediately at <a href="mailto:support@reino.app" style="color:var(--caramel)">support@reino.app</a>.</p>
+    <p>You may delete your account at any time from <strong>Settings → Delete Account</strong>. Deletion is permanent — your profile, credentials, and personal data will be erased from our systems as described in our Privacy Policy.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">04</div>
+    <h2>User-Generated Content</h2>
+    <p>Reino allows you to post reviews, check-ins, photos, and direct messages. You retain ownership of the content you create. By posting it, you grant Reino a non-exclusive, royalty-free licence to display and distribute it within the app to provide the service.</p>
+    <p>You are solely responsible for the content you post. You agree that your content will not:</p>
+    <ul>
+      <li>Be false, misleading, or fraudulent.</li>
+      <li>Infringe the intellectual property rights of any third party.</li>
+      <li>Contain personal data of others without their consent.</li>
+      <li>Be used for spam, solicitation, or commercial promotion.</li>
+      <li>Violate any applicable Saudi law or regulation.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-number">05</div>
+    <h2>Community Standards & Zero-Tolerance Policy</h2>
+    <p>Reino is built around a culture of respect. We have an absolute zero-tolerance policy for the following content and behaviour on our platform:</p>
+
+    <div class="zero-tolerance">
+      <div class="zt-label">Zero Tolerance — Strictly Prohibited</div>
+      <p>Hate speech, harassment, bullying, threats, or discrimination based on race, religion, nationality, gender, or any other characteristic. Sexually explicit, violent, or graphic content of any kind. Impersonation of another person or entity. Content that exploits or endangers minors in any way. Coordinated abuse, brigading, or targeted harassment campaigns.</p>
+    </div>
+
+    <p>Any content or account found in violation of these standards will be actioned immediately. Depending on severity, this may include content removal, account suspension, or permanent ban. Serious violations may be reported to the relevant authorities in accordance with Saudi law.</p>
+    <p>Every piece of content in Reino — reviews, check-ins, photos, and direct messages — can be reported using the flag icon within the app. Every user profile includes a Report and Block option. All reports are reviewed by Reino's moderation team.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">06</div>
+    <h2>GPS Check-ins & Location</h2>
+    <p>Check-ins require you to be physically present within 500 metres of the cafe. You agree not to falsify your location, use GPS spoofing tools, or misrepresent your presence at any venue. Accounts found abusing the check-in system may be suspended.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">07</div>
+    <h2>Badges & Rankings</h2>
+    <p>Badges and city rankings are earned through genuine activity — real visits, honest reviews, and authentic engagement. Automated activity, bots, or any manipulation of rankings or badge counts is strictly prohibited and will result in account removal.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">08</div>
+    <h2>Intellectual Property</h2>
+    <p>The Reino name, logo, app design, and all original content produced by Reino are protected intellectual property. You may not reproduce, modify, or distribute them without written permission. Cafe names and logos referenced within the app belong to their respective owners.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">09</div>
+    <h2>Disclaimers & Limitation of Liability</h2>
+    <p>Reino is provided "as is." We do not guarantee that cafe information is always accurate or up to date — listings are user-contributed and may contain errors. We are not liable for any experience you have at a cafe based on content found in the app.</p>
+    <p>To the fullest extent permitted by law, Reino's liability for any claim arising from use of the app is limited to the amount you paid for the app (which is zero, as Reino is free).</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">10</div>
+    <h2>Governing Law</h2>
+    <p>These terms are governed by the laws of the Kingdom of Saudi Arabia. Any dispute arising from use of Reino shall be subject to the jurisdiction of the competent courts in the Kingdom of Saudi Arabia.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">11</div>
+    <h2>Contact</h2>
+    <p>For questions about these terms, content reports, or account issues:</p>
+    <div class="contact-card">
+      <p>Support & Terms enquiries</p>
+      <a href="mailto:support@reino.app">support@reino.app</a>
+    </div>
+    <div class="highlight-box" style="margin-top:20px">
+      <p>Privacy Policy: <a href="https://nuqat.app/reino-privacy.html" style="color:var(--caramel)">nuqat.app/reino-privacy.html</a></p>
+    </div>
+  </div>
+
+  <div class="effective-date">Last updated: May 2025</div>
+</div>
+</div>
+
+<!-- ══════════════════════ ARABIC ══════════════════════ -->
+<div class="ar-content">
+<div class="wrapper">
+
+  <div class="section">
+    <div class="section-number">٠١</div>
+    <h2>الموافقة على هذه الشروط</h2>
+    <p>بإنشاء حساب أو استخدام رينو، فإنك توافق على شروط الخدمة هذه. إن لم توافق، فيرجى عدم استخدام التطبيق. تُشكّل هذه الشروط اتفاقية ملزمة بينك وبين رينو. قد نُحدّثها من وقت لآخر — سنُخطرك عبر التطبيق عند إجراء أي تغيير، واستمرارك في الاستخدام يُعدّ قبولاً للشروط المعدَّلة.</p>
+    <p>رينو منصة اجتماعية لاكتشاف القهوة المتخصصة لعشاق القهوة في المملكة العربية السعودية. لا يُقصد به الترويج التجاري أو الإعلان أو أي غرض غير التواصل الاجتماعي الشخصي مع مجتمع القهوة.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">٠٢</div>
+    <h2>شروط الأهلية</h2>
+    <p>يجب أن يكون عمرك 13 عاماً على الأقل لاستخدام رينو. بالتسجيل، تؤكد استيفاءك لهذا الشرط. ستُحذف الحسابات التي يُتبيَّن أنها تعود لأطفال دون سن الثالثة عشرة دون إشعار مسبق.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">٠٣</div>
+    <h2>حسابك</h2>
+    <p>أنت مسؤول عن الحفاظ على أمان بيانات اعتماد حسابك. لا تشارك كلمة مرورك. أنت مسؤول عن جميع الأنشطة التي تجري تحت حسابك. إن كنت تشك في وصول غير مصرح به، تواصل معنا فوراً على <a href="mailto:support@reino.app" style="color:var(--caramel)">support@reino.app</a>.</p>
+    <p>يمكنك حذف حسابك في أي وقت من <strong>الإعدادات ← حذف الحساب</strong>. الحذف دائم — سيُمسح ملفك الشخصي وبيانات اعتمادك ومعلوماتك الشخصية من أنظمتنا وفق ما هو مبيَّن في سياسة الخصوصية.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">٠٤</div>
+    <h2>المحتوى الذي ينشئه المستخدمون</h2>
+    <p>يتيح رينو نشر المراجعات وتسجيلات الحضور والصور والرسائل المباشرة. تحتفظ بملكية المحتوى الذي تنشئه. بنشره، تمنح رينو ترخيصاً غير حصري وبدون مقابل لعرضه وتوزيعه داخل التطبيق لتقديم الخدمة.</p>
+    <p>أنت المسؤول الوحيد عن المحتوى الذي تنشره. توافق على أن يكون محتواك خالياً مما يلي:</p>
+    <ul>
+      <li>المعلومات الكاذبة أو المضللة أو الاحتيالية.</li>
+      <li>انتهاك حقوق الملكية الفكرية لأي طرف ثالث.</li>
+      <li>البيانات الشخصية للآخرين دون موافقتهم.</li>
+      <li>البريد العشوائي أو الترويج التجاري أو طلب الخدمات.</li>
+      <li>مخالفة أي نظام أو لائحة سعودية معمول بها.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-number">٠٥</div>
+    <h2>معايير المجتمع وسياسة الصفر تسامح</h2>
+    <p>رينو مبني على ثقافة الاحترام. نتبنى سياسة صفر تسامح مطلقة تجاه المحتوى والسلوك التالي على منصتنا:</p>
+
+    <div class="zero-tolerance">
+      <div class="zt-label" style="font-family:'Noto Naskh Arabic',serif">صفر تسامح — محظور تماماً</div>
+      <p>خطاب الكراهية والمضايقة والتنمر والتهديد والتمييز على أساس العرق أو الدين أو الجنسية أو النوع الاجتماعي أو أي صفة أخرى. المحتوى الجنسي الصريح أو العنيف أو الصادم بأي شكل. انتحال شخصية أي فرد أو جهة. أي محتوى يستغل الأطفال أو يعرضهم للخطر. حملات الإيذاء المنسقة أو التحرش الممنهج.</p>
+    </div>
+
+    <p>سيُتخذ إجراء فوري بحق أي محتوى أو حساب يُخالف هذه المعايير. بحسب خطورة المخالفة، قد يشمل ذلك حذف المحتوى أو تعليق الحساب أو الحظر الدائم. قد تُحال المخالفات الجسيمة إلى الجهات المختصة وفق النظام السعودي.</p>
+    <p>يمكن الإبلاغ عن أي محتوى في رينو — مراجعات وتسجيلات حضور وصور ورسائل مباشرة — عبر أيقونة الإبلاغ داخل التطبيق. يتضمن كل ملف شخصي خيار الإبلاغ والحظر. يراجع فريق إدارة رينو جميع البلاغات.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">٠٦</div>
+    <h2>تسجيل الحضور عبر GPS والموقع الجغرافي</h2>
+    <p>يتطلب تسجيل الحضور تواجدك فعلياً ضمن نطاق 500 متر من المقهى. توافق على عدم تزوير موقعك الجغرافي أو استخدام أدوات انتحال GPS أو تضليل الآخرين بشأن حضورك في أي مكان. قد تُعلَّق الحسابات التي تُسيء استخدام نظام تسجيل الحضور.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">٠٧</div>
+    <h2>الشارات والتصنيفات</h2>
+    <p>تُكتسب الشارات وتصنيفات المدن من خلال النشاط الحقيقي — زيارات فعلية ومراجعات صادقة ومشاركة أصيلة. يُحظر تحديداً النشاط الآلي والبوتات وأي تلاعب بالتصنيفات أو أعداد الشارات، ويُفضي إلى حذف الحساب.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">٠٨</div>
+    <h2>الملكية الفكرية</h2>
+    <p>اسم رينو وشعاره وتصميم التطبيق وجميع المحتوى الأصلي الصادر عن رينو محمية بموجب حقوق الملكية الفكرية. لا يجوز إعادة إنتاجها أو تعديلها أو توزيعها دون إذن خطي. أسماء المقاهي وشعاراتها المذكورة في التطبيق هي ملك لأصحابها.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">٠٩</div>
+    <h2>إخلاء المسؤولية وتحديد المسؤولية</h2>
+    <p>يُقدَّم رينو "كما هو". لا نضمن دقة معلومات المقاهي أو حداثتها في جميع الأوقات — القوائم مساهمة من المستخدمين وقد تحتوي على أخطاء. لسنا مسؤولين عن أي تجربة تمر بها في مقهى بناءً على محتوى وجدته في التطبيق.</p>
+    <p>في أقصى الحدود التي يجيزها القانون، تقتصر مسؤولية رينو عن أي مطالبة ناشئة عن استخدام التطبيق على المبلغ الذي دفعته مقابله، وهو صفر لكون رينو مجانياً.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">١٠</div>
+    <h2>القانون الحاكم</h2>
+    <p>تخضع هذه الشروط لنظام المملكة العربية السعودية. أي نزاع ينشأ عن استخدام رينو يخضع لاختصاص المحاكم المختصة في المملكة العربية السعودية.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">١١</div>
+    <h2>تواصل معنا</h2>
+    <p>للاستفسار عن هذه الشروط أو الإبلاغ عن محتوى أو مسائل الحساب:</p>
+    <div class="contact-card">
+      <p>الدعم والاستفسارات</p>
+      <a href="mailto:support@reino.app">support@reino.app</a>
+    </div>
+    <div class="highlight-box" style="margin-top:20px">
+      <p>سياسة الخصوصية: <a href="https://nuqat.app/reino-privacy.html" style="color:var(--caramel)">nuqat.app/reino-privacy.html</a></p>
+    </div>
+  </div>
+
+  <div class="effective-date">آخر تحديث: مايو 2025</div>
+</div>
+</div>
+
+<footer>
+  <span class="en-content">© 2025 Reino · All rights reserved</span>
+  <span class="ar-content" style="font-family:'Noto Naskh Arabic',serif">© 2025 رينو · جميع الحقوق محفوظة</span>
+</footer>
+
+<script>
+  function setLang(lang) {
+    const body = document.getElementById('body');
+    const btnEn = document.getElementById('btn-en');
+    const btnAr = document.getElementById('btn-ar');
+    if (lang === 'ar') {
+      body.classList.add('ar');
+      document.documentElement.setAttribute('dir', 'rtl');
+      document.documentElement.setAttribute('lang', 'ar');
+      btnAr.classList.add('active');
+      btnEn.classList.remove('active');
+    } else {
+      body.classList.remove('ar');
+      document.documentElement.setAttribute('dir', 'ltr');
+      document.documentElement.setAttribute('lang', 'en');
+      btnEn.classList.add('active');
+      btnAr.classList.remove('active');
+    }
+  }
+</script>
+</body>
+</html>

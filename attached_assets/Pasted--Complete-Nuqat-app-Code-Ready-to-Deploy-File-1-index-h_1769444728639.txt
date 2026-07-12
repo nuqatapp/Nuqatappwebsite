@@ -1,0 +1,1048 @@
+
+Complete Nuqat.app Code - Ready to Deploy
+
+File 1: index.html (Complete - Replace Everything)
+html<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>نُقَط | Nuqat.app - Every Dot Tells a Story</title>
+  <meta name="description" content="Explore a curated collection of educational games, family apps, and business tools. Each app is a deliberate dot in a growing constellation of meaningful digital products.">
+  <meta name="keywords" content="apps, games, portfolio, Arabic apps, educational games, mobile apps, web apps, family apps, business tools">
+  <meta name="author" content="Areej - Nuqat Studio">
+  
+  <!-- Open Graph (for social sharing) -->
+  <meta property="og:title" content="Nuqat.app - Every Dot Tells a Story">
+  <meta property="og:description" content="A curated collection of apps and games, each one a deliberate stroke in an evolving portfolio.">
+  <meta property="og:image" content="https://nuqat.app/assets/og-image.jpg">
+  <meta property="og:url" content="https://nuqat.app">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nuqat.app - Every Dot Tells a Story">
+  <meta name="twitter:description" content="Explore a curated collection of apps and games">
+  <meta name="twitter:image" content="https://nuqat.app/assets/og-image.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Naskh+Arabic:wght@400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- Header -->
+  <header class="site-header">
+    <h1 class="logo">نُقَط</h1>
+    <p class="tagline">Every dot tells a story</p>
+  </header>
+
+  <!-- Filter Bar -->
+  <nav class="filter-bar">
+    <div class="filter-group">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="learn">Learn</button>
+      <button class="filter-btn" data-category="family">Family</button>
+      <button class="filter-btn" data-category="utilities">Utilities</button>
+      <button class="filter-btn" data-category="business">Business</button>
+    </div>
+    <input 
+      type="text" 
+      id="search-input" 
+      placeholder="Search apps..." 
+      class="search-box"
+    />
+  </nav>
+
+  <!-- Constellation Container -->
+  <main class="constellation-container">
+    <div id="dots-canvas" class="dots-canvas"></div>
+  </main>
+
+  <!-- Floating App Card (hidden by default) -->
+  <div id="app-card" class="app-card hidden">
+    <div class="app-card-header">
+      <div>
+        <h3 class="app-name"></h3>
+        <p class="app-name-arabic"></p>
+      </div>
+      <div class="app-dot"></div>
+    </div>
+    <p class="app-description"></p>
+    <div class="app-tech"></div>
+    <div class="app-platform"></div>
+    <a href="#" class="app-link">View Details →</a>
+  </div>
+
+  <!-- App Detail Modal (hidden by default) -->
+  <div id="app-modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div class="modal-dot"></div>
+      <h2 class="modal-title"></h2>
+      <p class="modal-title-arabic"></p>
+      
+      <div class="modal-platform"></div>
+
+      <div class="modal-screenshot">
+        <p>Screenshot coming soon</p>
+      </div>
+
+      <div class="modal-body">
+        <h3>About this dot</h3>
+        <p class="modal-description"></p>
+
+        <h4>Built with</h4>
+        <div class="modal-tech"></div>
+
+        <a href="#" class="modal-launch-btn" target="_blank">Launch App →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>Built with intention at Nuqat Studio</p>
+    <p><a href="mailto:areej@nuqat.app" class="footer-link">areej@nuqat.app</a></p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+File 2: data.js (Complete - Your Real Apps)
+javascript// Your apps database
+const APPS = [
+  {
+    id: 'hikmah-game',
+    name: 'Hikmah Game',
+    nameArabic: 'لعبة حكمة',
+    category: 'learn',
+    platform: 'Web Game',
+    platformArabic: 'لعبة ويب',
+    description: 'Educational multiplayer game platform featuring Arabic and English content with real-time quiz battles. Challenge your knowledge and compete with players around the world.',
+    tech: ['React', 'Supabase', 'WebSockets', 'Real-time'],
+    link: 'https://hikmah-game.com', // Update with your actual URL
+    status: 'live', // live, beta, coming-soon
+    color: '#5E2B38'
+  },
+  {
+    id: 'gurb-app',
+    name: 'Gurb',
+    nameArabic: 'قرب',
+    category: 'family',
+    platform: 'Mobile App',
+    platformArabic: 'تطبيق جوال',
+    description: 'Family connection mobile application designed to keep loved ones close. Share moments, coordinate schedules, and stay connected with the people who matter most.',
+    tech: ['React Native', 'Supabase', 'Push Notifications', 'Geolocation'],
+    link: '#', // Update when ready to launch
+    status: 'live',
+    color: '#C27332'
+  },
+  {
+    id: 'house-closet',
+    name: 'House Closet',
+    nameArabic: 'خزانة المنزل',
+    category: 'utilities',
+    platform: 'Mobile App',
+    platformArabic: 'تطبيق جوال',
+    description: 'Home organization and inventory management app. Keep track of what you own, where it's stored, and never lose track of your belongings again. Coming soon.',
+    tech: ['React Native', 'Image Recognition', 'SQLite', 'Cloud Sync'],
+    link: '#',
+    status: 'coming-soon',
+    color: '#7B5E4A'
+  },
+  {
+    id: 'startup-account',
+    name: 'Startup Account',
+    nameArabic: 'حساب الشركة الناشئة',
+    category: 'business',
+    platform: 'Web App',
+    platformArabic: 'تطبيق ويب',
+    description: 'Web-based business accounting and financial management platform built specifically for startups. Track expenses, manage invoices, and stay on top of your startup finances.',
+    tech: ['Next.js', 'PostgreSQL', 'Stripe', 'Financial APIs'],
+    link: '#', // Update with your actual URL
+    status: 'beta',
+    color: '#393F46'
+  }
+];
+
+// Site configuration
+const SITE_CONFIG = {
+  domain: 'nuqat.app',
+  email: 'areej@nuqat.app',
+  tagline: {
+    en: 'Every dot tells a story',
+    ar: 'كل نقطة تحكي قصة'
+  }
+};
+
+File 3: style.css (Complete - Full Styling)
+css/* Google Fonts are loaded in HTML */
+
+:root {
+  /* Nuqat Ink Palette */
+  --nuqat-mulberry: #5E2B38;
+  --nuqat-slate: #393F46;
+  --nuqat-amber: #C27332;
+  --nuqat-paper: #F8F5EC;
+  
+  /* States */
+  --dot-rest: rgba(57, 63, 70, 0.6);
+  --dot-hover: #C27332;
+  --dot-active: #5E2B38;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--nuqat-paper);
+  color: var(--nuqat-slate);
+  font-family: 'IBM Plex Sans', 'Noto Naskh Arabic', sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Header */
+.site-header {
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+}
+
+.logo {
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 700;
+  color: var(--nuqat-mulberry);
+  margin-bottom: 0.5rem;
+  font-family: 'Noto Naskh Arabic', serif;
+}
+
+.tagline {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  color: var(--nuqat-slate);
+  opacity: 0.8;
+}
+
+/* Filter Bar */
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 1rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.filter-group {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-btn {
+  padding: 0.5rem 1.25rem;
+  border-radius: 2rem;
+  border: 1px solid rgba(57, 63, 70, 0.2);
+  background: white;
+  color: var(--nuqat-slate);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.filter-btn:hover {
+  border-color: var(--nuqat-amber);
+  color: var(--nuqat-amber);
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: var(--nuqat-amber);
+  color: white;
+  border-color: var(--nuqat-amber);
+}
+
+.search-box {
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  border: 1px solid rgba(57, 63, 70, 0.2);
+  background: white;
+  font-size: 0.875rem;
+  font-family: inherit;
+  width: 200px;
+  transition: all 0.3s ease;
+}
+
+.search-box:focus {
+  outline: none;
+  border-color: var(--nuqat-amber);
+  box-shadow: 0 0 0 3px rgba(194, 115, 50, 0.1);
+}
+
+/* Constellation */
+.constellation-container {
+  min-height: 600px;
+  position: relative;
+  padding: 2rem;
+  cursor: crosshair;
+}
+
+.dots-canvas {
+  position: relative;
+  max-width: 1200px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+.dot {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--dot-rest);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: inherit;
+  opacity: 0.3;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.dot::after {
+  content: attr(data-name);
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  color: var(--nuqat-slate);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.dot:hover {
+  transform: scale(1.5);
+  box-shadow: 0 4px 12px rgba(194, 115, 50, 0.3);
+  z-index: 10;
+}
+
+.dot:hover::before {
+  transform: scale(1.8);
+  opacity: 0;
+}
+
+.dot:hover::after {
+  opacity: 1;
+}
+
+.dot.hidden {
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* Status badges */
+.dot.coming-soon::after {
+  content: attr(data-name) ' (Coming Soon)';
+}
+
+.dot.beta::after {
+  content: attr(data-name) ' (Beta)';
+}
+
+/* App Card (Floating) */
+.app-card {
+  position: fixed;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  width: 320px;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  border: 1px solid rgba(57, 63, 70, 0.1);
+}
+
+.app-card.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.app-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.app-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--nuqat-amber);
+  margin-bottom: 0.25rem;
+}
+
+.app-name-arabic {
+  font-size: 0.875rem;
+  color: var(--nuqat-slate);
+  opacity: 0.6;
+  font-family: 'Noto Naskh Arabic', sans-serif;
+}
+
+.app-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.app-platform {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  background: var(--nuqat-paper);
+  border-radius: 0.5rem;
+  color: var(--nuqat-slate);
+  margin-bottom: 0.75rem;
+  border: 1px solid rgba(57, 63, 70, 0.1);
+}
+
+.app-description {
+  font-size: 0.875rem;
+  color: var(--nuqat-slate);
+  opacity: 0.8;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.app-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tech-tag {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  background: var(--nuqat-paper);
+  border-radius: 0.5rem;
+  color: var(--nuqat-slate);
+}
+
+.app-link {
+  font-size: 0.875rem;
+  color: var(--nuqat-amber);
+  text-decoration: none;
+  pointer-events: auto;
+  font-weight: 500;
+}
+
+.app-link:hover {
+  text-decoration: underline;
+}
+
+/* Status badge in card */
+.status-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 1rem;
+  margin-left: 0.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.status-badge.live {
+  background: #22c55e;
+  color: white;
+}
+
+.status-badge.beta {
+  background: #f59e0b;
+  color: white;
+}
+
+.status-badge.coming-soon {
+  background: var(--nuqat-slate);
+  color: white;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: var(--nuqat-paper);
+  max-width: 800px;
+  width: 100%;
+  padding: 3rem;
+  border-radius: 1rem;
+  position: relative;
+  animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--nuqat-slate);
+  cursor: pointer;
+  line-height: 1;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.modal-close:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.modal-dot {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+.modal-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--nuqat-mulberry);
+  margin-bottom: 0.5rem;
+}
+
+.modal-title-arabic {
+  font-size: 1.5rem;
+  color: var(--nuqat-slate);
+  opacity: 0.6;
+  margin-bottom: 1.5rem;
+  font-family: 'Noto Naskh Arabic', sans-serif;
+}
+
+.modal-platform {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  background: white;
+  border-radius: 0.5rem;
+  color: var(--nuqat-slate);
+  margin-bottom: 2rem;
+  border: 1px solid rgba(57, 63, 70, 0.1);
+}
+
+.modal-screenshot {
+  background: rgba(57, 63, 70, 0.05);
+  height: 400px;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  color: var(--nuqat-slate);
+  opacity: 0.4;
+  border: 2px dashed rgba(57, 63, 70, 0.2);
+}
+
+.modal-body h3 {
+  color: var(--nuqat-mulberry);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.modal-body h4 {
+  color: var(--nuqat-mulberry);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.modal-description {
+  color: var(--nuqat-slate);
+  opacity: 0.8;
+  line-height: 1.8;
+  font-size: 1.125rem;
+}
+
+.modal-tech {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.modal-tech .tech-tag {
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+}
+
+.modal-launch-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--nuqat-amber);
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.modal-launch-btn:hover {
+  background: var(--nuqat-mulberry);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(94, 43, 56, 0.3);
+}
+
+.modal-launch-btn.disabled {
+  background: var(--nuqat-slate);
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--nuqat-slate);
+  opacity: 0.6;
+  font-size: 0.875rem;
+}
+
+.site-footer p + p {
+  margin-top: 0.5rem;
+}
+
+.footer-link {
+  color: var(--nuqat-slate);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: var(--nuqat-amber);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .constellation-container {
+    min-height: 500px;
+  }
+  
+  .dots-canvas {
+    height: 500px;
+  }
+  
+  .app-card {
+    width: calc(100vw - 2rem);
+    max-width: 320px;
+  }
+  
+  .modal-content {
+    padding: 2rem;
+  }
+  
+  .modal-title {
+    font-size: 2rem;
+  }
+  
+  .filter-bar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .search-box {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .modal-screenshot {
+    height: 250px;
+  }
+}
+
+/* Smooth animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+File 4: script.js (Complete - Full Interactivity)
+javascript// State
+let currentFilter = 'all';
+let searchQuery = '';
+let hoveredApp = null;
+
+// DOM Elements
+const dotsCanvas = document.getElementById('dots-canvas');
+const appCard = document.getElementById('app-card');
+const appModal = document.getElementById('app-modal');
+const searchInput = document.getElementById('search-input');
+
+// Generate semi-random but consistent dot positions
+function getDotPosition(index, total) {
+  const cols = Math.ceil(Math.sqrt(total));
+  const col = index % cols;
+  const row = Math.floor(index / cols);
+  
+  // Add organic randomness
+  const jitterX = Math.sin(index * 1.5) * 50;
+  const jitterY = Math.cos(index * 2) * 50;
+  
+  const left = (col / cols) * 80 + 10 + jitterX/10;
+  const top = (row / Math.ceil(total/cols)) * 80 + 10 + jitterY/10;
+  
+  return { left: `${left}%`, top: `${top}%` };
+}
+
+// Get status badge HTML
+function getStatusBadge(status) {
+  const badges = {
+    'live': '<span class="status-badge live">Live</span>',
+    'beta': '<span class="status-badge beta">Beta</span>',
+    'coming-soon': '<span class="status-badge coming-soon">Coming Soon</span>'
+  };
+  return badges[status] || '';
+}
+
+// Create dot elements
+function renderDots() {
+  dotsCanvas.innerHTML = '';
+  
+  APPS.forEach((app, index) => {
+    const dot = document.createElement('div');
+    dot.className = `dot ${app.status}`;
+    dot.dataset.id = app.id;
+    dot.dataset.name = app.name;
+    dot.dataset.category = app.category;
+    dot.style.backgroundColor = 'var(--dot-rest)';
+    
+    const pos = getDotPosition(index, APPS.length);
+    dot.style.left = pos.left;
+    dot.style.top = pos.top;
+    
+    // Hover events
+    dot.addEventListener('mouseenter', (e) => showAppCard(app, e));
+    dot.addEventListener('mousemove', (e) => moveAppCard(e));
+    dot.addEventListener('mouseleave', hideAppCard);
+    
+    // Click to open modal
+    dot.addEventListener('click', () => openModal(app));
+    
+    dotsCanvas.appendChild(dot);
+  });
+  
+  applyFilters();
+}
+
+// Show floating app card
+function showAppCard(app, event) {
+  hoveredApp = app;
+  
+  // Update card content
+  appCard.querySelector('.app-name').innerHTML = app.name + ' ' + getStatusBadge(app.status);
+  appCard.querySelector('.app-name-arabic').textContent = app.nameArabic;
+  appCard.querySelector('.app-dot').style.backgroundColor = app.color;
+  appCard.querySelector('.app-description').textContent = app.description;
+  appCard.querySelector('.app-platform').textContent = app.platform;
+  
+  // Tech tags
+  const techContainer = appCard.querySelector('.app-tech');
+  techContainer.innerHTML = app.tech.map(t => 
+    `<span class="tech-tag">${t}</span>`
+  ).join('');
+  
+  // Update link
+  appCard.querySelector('.app-link').onclick = (e) => {
+    e.preventDefault();
+    openModal(app);
+  };
+  
+  // Change dot color
+  const dot = document.querySelector(`[data-id="${app.id}"]`);
+  if (dot) dot.style.backgroundColor = app.color;
+  
+  // Show card
+  appCard.classList.remove('hidden');
+  moveAppCard(event);
+}
+
+// Move card with mouse
+function moveAppCard(event) {
+  if (!hoveredApp) return;
+  
+  const cardWidth = 320;
+  const cardHeight = 400;
+  const padding = 20;
+  
+  let left = event.clientX + padding;
+  let top = event.clientY - 100;
+  
+  // Keep card within viewport
+  if (left + cardWidth > window.innerWidth) {
+    left = event.clientX - cardWidth - padding;
+  }
+  
+  if (top < 0) {
+    top = padding;
+  }
+  
+  if (top + cardHeight > window.innerHeight) {
+    top = window.innerHeight - cardHeight - padding;
+  }
+  
+  appCard.style.left = `${left}px`;
+  appCard.style.top = `${top}px`;
+}
+
+// Hide app card
+function hideAppCard() {
+  appCard.classList.add('hidden');
+  
+  if (hoveredApp) {
+    const dot = document.querySelector(`[data-id="${hoveredApp.id}"]`);
+    if (dot && !dot.classList.contains('hidden')) {
+      dot.style.backgroundColor = 'var(--dot-rest)';
+    }
+  }
+  
+  hoveredApp = null;
+}
+
+// Open modal
+function openModal(app) {
+  hideAppCard();
+  
+  // Update modal content
+  document.querySelector('.modal-dot').style.backgroundColor = app.color;
+  document.querySelector('.modal-title').innerHTML = app.name + ' ' + getStatusBadge(app.status);
+  document.querySelector('.modal-title-arabic').textContent = app.nameArabic;
+  document.querySelector('.modal-platform').textContent = `${app.platform} • ${app.platformArabic}`;
+  document.querySelector('.modal-description').textContent = app.description;
+  
+  // Tech tags
+  const modalTech = document.querySelector('.modal-tech');
+  modalTech.innerHTML = app.tech.map(t => 
+    `<span class="tech-tag">${t}</span>`
+  ).join('');
+  
+  // Launch button
+  const launchBtn = document.querySelector('.modal-launch-btn');
+  if (app.link === '#' || app.status === 'coming-soon') {
+    launchBtn.textContent = 'Coming Soon';
+    launchBtn.classList.add('disabled');
+    launchBtn.href = '#';
+  } else {
+    launchBtn.textContent = 'Launch App →';
+    launchBtn.classList.remove('disabled');
+    launchBtn.href = app.link;
+  }
+  
+  appModal.classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+}
+
+// Close modal
+function closeModal() {
+  appModal.classList.add('hidden');
+  document.body.style.overflow = 'auto';
+}
+
+// Filter functionality
+function applyFilters() {
+  const dots = document.querySelectorAll('.dot');
+  
+  dots.forEach(dot => {
+    const app = APPS.find(a => a.id === dot.dataset.id);
+    if (!app) return;
+    
+    const matchesFilter = currentFilter === 'all' || app.category === currentFilter;
+    const matchesSearch = app.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         app.nameArabic.includes(searchQuery) ||
+                         app.description.toLowerCase().includes(searchQuery.toLowerCase());
+    
+    if (matchesFilter && matchesSearch) {
+      dot.classList.remove('hidden');
+    } else {
+      dot.classList.add('hidden');
+    }
+  });
+  
+  // Show "no results" message if all dots are hidden
+  const visibleDots = document.querySelectorAll('.dot:not(.hidden)');
+  const existingMessage = document.querySelector('.no-results');
+  
+  if (visibleDots.length === 0 && !existingMessage) {
+    const message = document.createElement('div');
+    message.className = 'no-results';
+    message.style.cssText = 'text-align: center; padding: 4rem; color: var(--nuqat-slate); opacity: 0.6;';
+    message.innerHTML = `
+      <p style="font-size: 1.25rem; margin-bottom: 0.5rem;">No dots found</p>
+      <p style="font-size: 0.875rem;">Try a different filter or search term</p>
+    `;
+    dotsCanvas.appendChild(message);
+  } else if (visibleDots.length > 0 && existingMessage) {
+    existingMessage.remove();
+  }
+}
+
+// Event listeners
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentFilter = btn.dataset.category;
+    applyFilters();
+  });
+});
+
+searchInput.addEventListener('input', (e) => {
+  searchQuery = e.target.value;
+  applyFilters();
+});
+
+document.querySelector('.modal-close').addEventListener('click', closeModal);
+appModal.addEventListener('click', (e) => {
+  if (e.target === appModal) closeModal();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeModal();
+    hideAppCard();
+  }
+});
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', () => {
+  renderDots();
+  console.log('🎨 Nuqat.app loaded successfully!');
+  console.log(`📱 ${APPS.length} apps in constellation`);
+});
+
+// Handle window resize
+let resizeTimeout;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    renderDots();
+  }, 250);
+});
+
+🚀 Now Deploy Your Site!
+Step 1: In Replit
+
+Click "Run" at the top
+Your site will appear in the preview!
+Test all the features:
+
+Hover over dots
+Click to open modals
+Try the filters
+Search for apps
+
+
+
+Step 2: Deploy to Nuqat.app
+
+Click "Deploy" button (top right in Replit)
+Choose "Static" deployment
+Follow the DNS setup instructions for your domain
+
+
+📝 Quick Customization Guide
+To Update App Info:
+Edit data.js and change:
+
+name - App name in English
+nameArabic - App name in Arabic
+link - Change from # to your actual URL when ready
+status - Change to 'live' when launched
+description - Update with real description
+
+To Add More Apps:
+Just add a new object to the APPS array in data.js:
+javascript{
+  id: 'new-app-id',
+  name: 'New App Name',
+  nameArabic: 'اسم التطبيق الجديد',
+  category: 'utilities', // learn, family, utilities, business
+  platform: 'Web App', // or 'Mobile App'
+  platformArabic: 'تطبيق ويب',
+  description: 'Your app description here.',
+  tech: ['React', 'Node.js'],
+  link: '#',
+  status: 'coming-soon', // live, beta, coming-soon
+  color: '#8B7355' // Pick a color from your palette
+}

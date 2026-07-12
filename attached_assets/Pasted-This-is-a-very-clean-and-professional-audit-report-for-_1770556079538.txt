@@ -1,0 +1,86 @@
+This is a very clean and professional audit report for **Nuqat.app**. Since the site is primarily a static portfolio, you are in a great position—most of these are "best practice" hardening steps rather than emergency fires.
+
+However, as you scale the **Nuqat** brand and add more "dots" (apps) to your ecosystem, cleaning this up now will create a much safer foundation.
+
+Here is a prioritized plan to address these findings, starting with the most impactful "High" and "Medium" risks.
+
+---
+
+## 1. Quick Wins (The "High" Risks)
+
+These two steps provide the most protection for the least amount of effort.
+
+### **Add Security Headers (Helmet)**
+
+In `server/index.ts`, you should initialize `helmet`. This automatically fixes the "No security headers" and "No CSP" issues.
+
+* **Action:** Install it via `npm install helmet`, then add it to your Express app:
+
+```typescript
+import helmet from "helmet";
+app.use(helmet());
+
+```
+
+### **Implement Rate Limiting**
+
+To prevent bots from scraping your app list or hitting your API too hard, add a basic rate limiter to `server/routes.ts`.
+
+* **Action:** Use `express-rate-limit`.
+
+```typescript
+import { rateLimit } from 'express-rate-limit';
+
+const apiLimiter = rateLimit({
+	windowMs: 15 * 60 * 1000, // 15 minutes
+	limit: 100, // Limit each IP to 100 requests per window
+	standardHeaders: 'draft-7',
+	legacyHeaders: false,
+});
+
+app.use("/api/", apiLimiter);
+
+```
+
+---
+
+## 2. Privacy & Data Leaks (The "Medium" Risks)
+
+Since you are building a brand, protecting your professional email and internal logs is key.
+
+### **Obfuscate Your Email**
+
+Spam bots crawl GitHub and static sites for `mailto` links.
+
+* **Fix:** Instead of a hardcoded string in `shared/schema.ts`, use a simple JavaScript function to "construct" the email on click, or use a contact form that sends the data to the backend.
+
+### **Sanitize Error Logging**
+
+In `server/index.ts`, you are currently sending the raw error to the client.
+
+* **Fix:** Change your error handler to only send a generic message in production.
+
+```typescript
+// server/index.ts
+app.use((err: any, req: Request, res: Response, next: NextFunction) => {
+  const status = err.status || err.statusCode || 500;
+  const message = process.env.NODE_ENV === 'production' 
+    ? "Internal Server Error" 
+    : err.message; // Only show detail in dev
+  res.status(status).json({ message });
+});
+
+```
+
+---
+
+## 3. General Cleanup
+
+* **Unused Dependencies:** Since you aren't using `passport` or `express-session` for Nuqat yet, run `npm uninstall passport passport-local express-session connect-pg-simple memorystore`. This reduces your "dependency hell" and makes the project lighter.
+* **Search Sanitization:** Even though React escapes text, it’s good practice to trim or limit the character length of the search query in `server/storage.ts` to prevent extremely long strings from slowing down your `includes()` logic.
+
+---
+
+### **Recommended Next Step**
+
+Would you like me to **write the specific code snippets** for your `server/index.ts` and `server/routes.ts` files to resolve the Helmet and Rate Limiting issues simultaneously?
