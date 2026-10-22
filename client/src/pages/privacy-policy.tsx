@@ -2,6 +2,7 @@ import { Link, useParams } from "wouter";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CONTACT_EMAIL } from "@shared/schema";
+import GurbPrivacyPolicy from "./gurb-privacy-policy";
 
 function useContactEmail() {
   return CONTACT_EMAIL;
@@ -25,131 +26,6 @@ interface PrivacyData {
 }
 
 const PRIVACY_DATA: Record<string, PrivacyData> = {
-  gurb: {
-    appNameArabic: "قرب",
-    appNameEnglish: "Gurb",
-    slug: "gurb",
-    lastUpdated: "February 1, 2026",
-    lastUpdatedAr: "1 فبراير 2026",
-    sectionsAr: [
-      {
-        title: "1. هدف التطبيق",
-        content: "تطبيق قرب هو تطبيق تسجيل اطمئنان شخصي يهدف إلى مساعدة المستخدمين على البقاء على تواصل مع أشخاص موثوقين من خلال تأكيد يومي بسيط بأنهم بخير. يتيح التطبيق للمستخدم إرسال حالة الاطمئنان اليومية، ويقوم بإشعار الأشخاص المحددين مسبقاً، المشار إليهم باسم الداعمين، في حال عدم تسجيل الاطمئنان.",
-        bold: "تطبيق قرب ليس خدمة طوارئ، وليس نظام إنذار طبي أو أمني، ولا يقدم أي ضمان للسلامة."
-      },
-      {
-        title: "2. المعلومات التي نقوم بجمعها",
-        content: "نقوم بجمع الحد الأدنى من البيانات اللازمة لتشغيل التطبيق.",
-        subsections: [
-          { title: "البيانات التي يقدمها المستخدم", items: ["الاسم أو اسم العرض", "البريد الإلكتروني أو رقم الهاتف المستخدم لتسجيل الدخول", "علاقات الداعمين", "حالة تسجيل الاطمئنان اليومية"] },
-          { title: "البيانات التي يتم جمعها تلقائياً", items: ["معرفات الجهاز والتطبيق", "رموز إشعارات الدفع", "التوقيتات المرتبطة بتسجيلات الاطمئنان والإشعارات", "سجلات استخدام وأخطاء تقنية أساسية"] }
-        ],
-        bold: "لا نقوم بجمع بيانات الموقع الجغرافي الفعلي."
-      },
-      {
-        title: "3. استخدام المعلومات",
-        content: ["تستخدم البيانات حصرياً للأغراض التالية:", "تمكين تسجيل الاطمئنان اليومي", "إشعار الداعمين عند عدم إجراء تسجيل الاطمئنان", "تمكين المستخدم من دعم مستخدمين آخرين", "حماية الحساب وإدارته", "تحسين استقرار وأداء التطبيق"],
-        bold: "لا يتم استخدام البيانات لأي أغراض تسويقية أو إعلانية."
-      },
-      {
-        title: "4. تخزين البيانات وأمنها",
-        content: ["يتم تخزين ومعالجة جميع البيانات باستخدام بنية Supabase التحتية.", "يتم تشفير البيانات أثناء النقل والتخزين", "يتم تقييد الوصول باستخدام أنظمة مصادقة وسياسات أمان قائمة على الأدوار", "يتم تطبيق إجراءات تقنية وتنظيمية معقولة لحماية البيانات"],
-        bold: "رغم ذلك، لا يمكن ضمان أمان أي نظام بشكل مطلق."
-      },
-      {
-        title: "5. مشاركة البيانات",
-        content: ["لا نقوم ببيع أو تأجير البيانات الشخصية. يتم مشاركة البيانات فقط في الحالات التالية:", "مع الداعمين الذين تختارهم، وبحدود حالة الاطمئنان والاسم فقط", "مع مزودي الخدمات مثل Supabase بالقدر اللازم لتشغيل التطبيق", "إذا طُلب ذلك بموجب الأنظمة أو الأوامر القضائية في المملكة العربية السعودية"]
-      },
-      {
-        title: "6. الاحتفاظ بالبيانات",
-        content: "يتم الاحتفاظ بالبيانات طوال فترة نشاط الحساب فقط. عند حذف الحساب، يتم حذف جميع البيانات المرتبطة به خلال فترة زمنية معقولة."
-      },
-      {
-        title: "7. حذف الحساب والبيانات",
-        content: "يمكن للمستخدم حذف حسابه في أي وقت من داخل التطبيق. الحذف نهائي وغير قابل للاسترجاع."
-      },
-      {
-        title: "8. مسؤولية المستخدم وإخلاء المسؤولية",
-        content: ["لا يغني التطبيق عن خدمات الطوارئ أو أنظمة السلامة الطبية أو التواصل المباشر. يقر المستخدم بما يلي:", "يتحمل المسؤولية الكاملة عن وجود وسائل أخرى للاطمئنان على أحبائه", "عدم الاعتماد على التطبيق كوسيلة وحيدة للسلامة", "إدراك أن الإشعارات قد تتأخر أو لا تصل", "استخدام التطبيق كأداة مساعدة غير حرجة فقط"],
-        bold: "تطبيق قرب ليس خدمة طوارئ."
-      },
-      {
-        title: "9. تحديد المسؤولية",
-        content: "يتم توفير تطبيق قرب كما هو وحسب التوفر. لا يتحمل التطبيق أو مالكوه أي مسؤولية عن أي أضرار ناتجة عن استخدامه."
-      },
-      {
-        title: "10. استخدام الأطفال",
-        content: "التطبيق غير مخصص للأطفال دون سن 13 عاماً."
-      },
-      {
-        title: "11. التعديلات",
-        content: "قد يتم تحديث هذه السياسة من وقت لآخر. استمرار الاستخدام بعد النشر يعد موافقة."
-      },
-      {
-        title: "12. النظام القانوني",
-        content: "تخضع هذه السياسة لأنظمة المملكة العربية السعودية."
-      }
-    ],
-    sectionsEn: [
-      {
-        title: "1. App Purpose",
-        content: "Gurb is a personal check-in application designed to help users stay connected with trusted contacts through simple daily confirmations.",
-        bold: "Gurb is not an emergency service, medical alert system, or safety guarantee."
-      },
-      {
-        title: "2. Information We Collect",
-        content: "We collect only the data necessary to operate the app.",
-        subsections: [
-          { title: "User Provided Data", items: ["Name or display name", "Email address or phone number", "Backer relationships", "Daily check-in status"] },
-          { title: "Automatically Collected Data", items: ["Device and app identifiers", "Push notification tokens", "Timestamps related to check-ins", "Basic usage and error logs"] }
-        ],
-        bold: "We do not collect real-time location data."
-      },
-      {
-        title: "3. Use of Information",
-        content: ["Collected data is used exclusively to:", "Enable daily check-ins", "Notify Backers when a check-in is missed", "Allow users to act as Backers for others", "Maintain account security", "Improve app stability and performance"],
-        bold: "User data is not used for advertising or marketing."
-      },
-      {
-        title: "4. Data Storage and Security",
-        content: ["All data is stored using Supabase infrastructure.", "Data is encrypted in transit and at rest", "Access is restricted using authentication and role-based policies", "Reasonable technical safeguards are applied"],
-        bold: "No system can be guaranteed completely secure."
-      },
-      {
-        title: "5. Data Sharing",
-        content: ["We do not sell or rent personal data. Data is shared only:", "With your selected Backers (limited to check-in status and name)", "With Supabase as a service provider", "When required by law in the Kingdom of Saudi Arabia"]
-      },
-      {
-        title: "6. Data Retention",
-        content: "Data is retained only while your account is active. Deletion removes all associated data."
-      },
-      {
-        title: "7. Account Deletion",
-        content: "Users may delete their account at any time from within the app. Deletion is permanent and irreversible."
-      },
-      {
-        title: "8. User Responsibility",
-        content: ["The app does not replace emergency services or direct communication. You agree that:", "You are responsible for maintaining other methods of checking on loved ones", "You must not rely exclusively on Gurb for safety", "Notifications may be delayed or fail", "The app is a supplementary, non-critical tool only"],
-        bold: "Gurb is not an emergency service."
-      },
-      {
-        title: "9. Limitation of Liability",
-        content: "Gurb is provided on an \"as is\" and \"as available\" basis. Use is at your own risk."
-      },
-      {
-        title: "10. Children's Use",
-        content: "Gurb is not intended for children under 13."
-      },
-      {
-        title: "11. Changes",
-        content: "This policy may be updated. Continued use constitutes acceptance."
-      },
-      {
-        title: "12. Governing Law",
-        content: "This policy is governed by the laws of the Kingdom of Saudi Arabia."
-      }
-    ]
-  },
   hikmah: {
     appNameArabic: "لعبة حكمة",
     appNameEnglish: "Hikmah Game",
@@ -375,6 +251,10 @@ export function PrivacyPolicyAR() {
   const data = PRIVACY_DATA[params.slug];
   const contactEmail = useContactEmail();
 
+  if (params.slug === "gurb") {
+    return <GurbPrivacyPolicy language="ar" />;
+  }
+
   if (!data) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center" dir="rtl">
@@ -437,6 +317,10 @@ export function PrivacyPolicyEN() {
   const params = useParams<{ slug: string }>();
   const data = PRIVACY_DATA[params.slug];
   const contactEmail = useContactEmail();
+
+  if (params.slug === "gurb") {
+    return <GurbPrivacyPolicy language="en" />;
+  }
 
   if (!data) {
     return (
