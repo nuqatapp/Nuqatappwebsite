@@ -187,7 +187,7 @@ export default function GurbPage() {
                   Privacy Policy
                 </Link>
                 <Link href="/gurb/support" className={`font-arabic hover:text-primary transition-colors ${focusRing}`} data-testid="link-support">
-                  الدعم
+                  دعم قرب
                 </Link>
               </div>
             </div>
