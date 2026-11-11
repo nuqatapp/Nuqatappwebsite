@@ -112,6 +112,7 @@ export default function AppLanding() {
   }
 
   const hasAppStore = !!app.appStoreUrl;
+  const hasPlayStore = !!app.playStoreUrl;
   const hasWebLink = app.link && app.link !== '#';
 
   return (
@@ -124,7 +125,14 @@ export default function AppLanding() {
               نقاط
             </Button>
           </Link>
-          {hasAppStore ? (
+          {hasPlayStore ? (
+            <a href={app.playStoreUrl} target="_blank" rel="noopener noreferrer">
+              <Button size="sm" className="gap-2 font-arabic" data-testid="button-download-header">
+                <Download className="w-4 h-4" />
+                حمّله من Google Play
+              </Button>
+            </a>
+          ) : hasAppStore ? (
             <a href={app.appStoreUrl} target="_blank" rel="noopener noreferrer">
               <Button size="sm" className="gap-2 font-arabic" data-testid="button-download-header">
                 <Download className="w-4 h-4" />
@@ -238,7 +246,14 @@ export default function AppLanding() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            {hasAppStore ? (
+            {hasPlayStore ? (
+              <a href={app.playStoreUrl} target="_blank" rel="noopener noreferrer" data-testid="link-google-play">
+                <Button size="lg" className="gap-3 font-arabic text-lg rounded-full px-8">
+                  <Download className="w-5 h-5" />
+                  حمّله من Google Play
+                </Button>
+              </a>
+            ) : hasAppStore ? (
               <a href={app.appStoreUrl} target="_blank" rel="noopener noreferrer" data-testid="link-app-store-badge">
                 <img
                   src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
@@ -279,6 +294,14 @@ export default function AppLanding() {
                 Privacy Policy
               </Button>
             </Link>
+            {hasPlayStore && (
+              <a href={app.playStoreUrl} target="_blank" rel="noopener noreferrer" data-testid="link-google-play-footer">
+                <Button variant="outline" size="sm" className="gap-2 font-arabic">
+                  <Download className="w-4 h-4" />
+                  Google Play
+                </Button>
+              </a>
+            )}
             {hasAppStore && (
               <a href={app.appStoreUrl} target="_blank" rel="noopener noreferrer">
                 <img

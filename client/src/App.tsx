@@ -1,4 +1,5 @@
-import { Switch, Route } from "wouter";
+import { Router as WouterRouter, Switch, Route } from "wouter";
+import { useHashLocation } from "wouter/use-hash-location";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -9,8 +10,13 @@ import AppLanding from "@/pages/app-landing";
 import GurbSupport from "@/pages/gurb-support";
 import { PrivacyPolicyAR, PrivacyPolicyEN } from "@/pages/privacy-policy";
 
+// Preview builds (VITE_HASH_ROUTING=1) route on the URL hash so the SPA works
+// when hosted under a sub-path. Production keeps normal path routing.
+const useHashRouting = import.meta.env.VITE_HASH_ROUTING === "1";
+
 function Router() {
   return (
+    <WouterRouter hook={useHashRouting ? useHashLocation : undefined}>
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/gurb/support" component={GurbSupport} />
@@ -19,6 +25,7 @@ function Router() {
       <Route path="/:slug" component={AppLanding} />
       <Route component={NotFound} />
     </Switch>
+    </WouterRouter>
   );
 }
 

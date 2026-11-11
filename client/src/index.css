@@ -13,18 +13,18 @@
   --elevate-2: rgba(0,0,0, .08);
 
   /* Nuqat Paper - warm cream background */
-  --background: 43 47% 95%;
+  --background: 56 67% 95%;   /* ivory #FBFAEB */
 
   /* Nuqat Slate - dark gray text */
-  --foreground: 213 10% 25%;
+  --foreground: 140 4% 27%;   /* charcoal #424844 */
 
   /* Subtle border */
-  --border: 213 10% 80%;
+  --border: 48 25% 84%;
 
   /* Card - white with slight warmth */
-  --card: 43 30% 99%;
-  --card-foreground: 213 10% 25%;
-  --card-border: 43 20% 88%;
+  --card: 56 60% 97%;
+  --card-foreground: 140 4% 27%;
+  --card-border: 48 30% 86%;
 
   /* Sidebar - slightly darker paper */
   --sidebar: 43 40% 92%;
@@ -38,32 +38,32 @@
 
   /* Popover */
   --popover: 43 30% 99%;
-  --popover-foreground: 213 10% 25%;
+  --popover-foreground: 140 4% 27%;
   --popover-border: 43 20% 88%;
 
   /* Primary - Nuqat Mulberry */
-  --primary: 345 38% 27%;
-  --primary-foreground: 43 47% 95%;
+  --primary: 334 63% 20%;   /* burgundy #54132F */
+  --primary-foreground: 56 67% 95%;
 
   /* Secondary - Muted version */
-  --secondary: 43 30% 92%;
-  --secondary-foreground: 213 10% 30%;
+  --secondary: 50 40% 91%;
+  --secondary-foreground: 140 4% 30%;
 
   /* Muted */
-  --muted: 43 25% 90%;
-  --muted-foreground: 213 10% 50%;
+  --muted: 50 35% 90%;
+  --muted-foreground: 140 5% 32%;
 
   /* Accent - Nuqat Amber */
-  --accent: 27 55% 48%;
-  --accent-foreground: 0 0% 100%;
+  --accent: 29 58% 46%;   /* ochre #BA7431 */
+  --accent-foreground: 56 67% 95%;
 
   /* Destructive */
   --destructive: 0 70% 50%;
   --destructive-foreground: 0 0% 100%;
 
   /* Input & Ring */
-  --input: 213 10% 75%;
-  --ring: 27 55% 48%;
+  --input: 48 20% 78%;
+  --ring: 29 58% 46%;
 
   /* Chart colors */
   --chart-1: 345 38% 27%;
@@ -72,8 +72,8 @@
   --chart-4: 27 40% 60%;
   --chart-5: 345 30% 40%;
 
-  --font-sans: 'IBM Plex Sans', sans-serif;
-  --font-serif: 'Noto Naskh Arabic', Georgia, serif;
+  --font-sans: 'DM Sans', 'IBM Plex Sans Arabic', sans-serif;
+  --font-serif: 'IBM Plex Sans Arabic', 'DM Sans', sans-serif;
   --font-mono: Menlo, monospace;
   --radius: .5rem;
   --shadow-2xs: 0px 1px 2px 0px rgba(57, 63, 70, 0.05);
@@ -269,7 +269,8 @@
   }
 
   .font-arabic {
-    font-family: 'Noto Naskh Arabic', serif;
+    font-family: 'IBM Plex Sans Arabic', 'DM Sans', sans-serif;
+    letter-spacing: 0;
   }
 
   @keyframes dot-pulse {
