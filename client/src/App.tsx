@@ -7,6 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import AppLanding from "@/pages/app-landing";
+import GurbPage from "@/pages/gurb";
 import GurbSupport from "@/pages/gurb-support";
 import { PrivacyPolicyAR, PrivacyPolicyEN } from "@/pages/privacy-policy";
 
@@ -20,6 +21,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/gurb/support" component={GurbSupport} />
+      <Route path="/gurb" component={GurbPage} />
       <Route path="/:slug/privacy-ar" component={PrivacyPolicyAR} />
       <Route path="/:slug/privacy-en" component={PrivacyPolicyEN} />
       <Route path="/:slug" component={AppLanding} />
