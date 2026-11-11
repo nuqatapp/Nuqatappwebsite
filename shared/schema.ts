@@ -21,6 +21,7 @@ export const appSchema = z.object({
   tech: z.array(z.string()),
   iconUrl: z.string().optional(),
   appStoreUrl: z.string().optional(),
+  playStoreUrl: z.string().optional(),
   link: z.string(),
   status: appStatusSchema,
   color: z.string(),
@@ -47,7 +48,7 @@ export const APPS_DATA: App[] = [
     tech: ['React', 'Supabase', 'WebSockets', 'Real-time'],
     appStoreUrl: undefined,
     link: 'https://hikmahgame.com/',
-    status: 'live',
+    status: 'coming-soon',
     color: '#5E2B38'
   },
   {
@@ -64,7 +65,8 @@ export const APPS_DATA: App[] = [
     howArabic: 'يعتمد قرب على Supabase لتخزين البيانات بشكل آمن ومشفّر، مع نظام إشعارات ذكي يعمل في الخلفية. جميع الاتصالات مشفرة ولا نشارك بياناتك مع أي طرف ثالث.',
     tech: ['React Native', 'Supabase', 'Push Notifications'],
     iconUrl: '/gurb-logo.png',
-    appStoreUrl: undefined,
+    appStoreUrl: 'https://apps.apple.com/us/app/gurb/id6759164131',
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=sa.nuqat.gurb',
     link: '#',
     status: 'live',
     color: '#C27332',
@@ -150,7 +152,20 @@ export const SITE_CONFIG = {
   tagline: {
     en: 'Every dot tells a story',
     ar: 'كل نقطة تحكي قصة'
-  }
+  },
+  studioLine: {
+    ar: 'تطبيقات سعودية بسيطة ليومك',
+    en: 'Simple Saudi apps for daily life'
+  },
+  featuredSlug: 'gurb'
 };
+
+// Social links shown in the footer. Leave a url empty to hide that platform.
+export const SOCIAL_LINKS: { label: string; url: string }[] = [
+  { label: 'TikTok', url: 'https://www.tiktok.com/@nuqat.app' },
+  { label: 'Instagram', url: 'https://www.instagram.com/nuqat.app/' },
+  { label: 'Snapchat', url: 'https://www.snapchat.com/add/nuqatapp' },
+  { label: 'X', url: 'https://x.com/nuqatapp' },
+];
 
 export const CONTACT_EMAIL = 'nuqat.app@gmail.com';
