@@ -150,6 +150,9 @@ html[lang=en] .slogan{line-height:1.25;letter-spacing:-.015em}
 .stores{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
 .store{display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 22px;border-radius:999px;border:1px solid hsl(var(--ivory)/.25);font-size:15px;font-weight:600;transition:background .25s var(--ease-s),color .25s var(--ease-s)}
 .store:hover{background:hsl(var(--ivory));color:hsl(var(--char))}
+.gmore{display:inline-flex;align-items:center;gap:8px;height:48px;padding:0 10px;font-size:15px;font-weight:600;color:hsl(var(--ivory));text-decoration:underline;text-underline-offset:6px;text-decoration-color:hsl(var(--ivory)/.4);transition:text-decoration-color .25s var(--ease-s)}
+.gmore:hover{text-decoration-color:hsl(var(--ivory))}
+.gmore:focus-visible{outline-color:hsl(var(--ivory))}
 .screens{position:relative;display:flex;align-items:center;justify-content:center;direction:ltr;padding:10px 0 36px}
 .screens::before{content:"";position:absolute;inset:14% 14% 18%;border-radius:50%;background:radial-gradient(closest-side,rgba(104,173,154,.28),transparent);filter:blur(30px)}
 .sc{position:relative;display:block;height:auto;border-radius:22px;box-shadow:0 0 0 1px hsl(0 0% 100%/.1),0 26px 50px -22px rgba(0,0,0,.8)}
@@ -271,6 +274,7 @@ footer .relief.wide{margin-inline:0}
           <div class="stores">
             <a class="store" href="https://apps.apple.com/us/app/gurb/id6759164131" rel="noopener"><span class="ltr">App Store</span><svg class="arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
             <a class="store" href="https://play.google.com/store/apps/details?id=sa.nuqat.gurb" rel="noopener"><span class="ltr">Google Play</span><svg class="arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="gmore" href="/gurb"><span data-t="gmore">اعرف أكثر عن قرب</span><svg class="arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
           <p class="gdisc" data-t="gdisc">قرب ليس خدمة طوارئ أو نظام تنبيه طبي. في حالات الطوارئ، اتصل بخدمات الطوارئ المحلية.</p>
         </div>
@@ -338,7 +342,7 @@ footer .relief.wide{margin-inline:0}
       sub:"نقاط تصنع تطبيقات سعودية واضحة وسهلة. أولها قرب.",
       cta:"تعرّف على التطبيقات",strip:"قرب متوفر الحين على <bdi>App Store</bdi> و<bdi>Google Play</bdi>",hint:"كل نقطة ملوّنة تطبيق",
       ak:"النقاط حتى الآن",ah:"تطبيقات صغيرة، لأيام عادية.",anote:"كل تطبيق هنا جا من شي عشته أو شي أحبه. بعضها متوفر الحين، وبعضها في الطريق.",
-      gname:"قرب",gslogan:"مهما تبعد، خلك قرب اللي يحبونك",gdesc:"ضغطة واحدة كل يوم تطمّن اللي يحبونك إنك بخير. وإذا فاتتك، يوصل تنبيه للأشخاص اللي اخترتهم.",gnote:"قرب يضيف طمأنينة ليومك وتواصلك مع أهلك.",gdisc:"قرب ليس خدمة طوارئ أو نظام تنبيه طبي. في حالات الطوارئ، اتصل بخدمات الطوارئ المحلية.",gring:"لمسة وحدة كل 24 ساعة",
+      gname:"قرب",gslogan:"مهما تبعد، خلك قرب اللي يحبونك",gdesc:"ضغطة واحدة كل يوم تطمّن اللي يحبونك إنك بخير. وإذا فاتتك، يوصل تنبيه للأشخاص اللي اخترتهم.",gmore:"اعرف أكثر عن قرب",gnote:"قرب يضيف طمأنينة ليومك وتواصلك مع أهلك.",gdisc:"قرب ليس خدمة طوارئ أو نظام تنبيه طبي. في حالات الطوارئ، اتصل بخدمات الطوارئ المحلية.",gring:"لمسة وحدة كل 24 ساعة",
       soon:"قريباً",hname:"حكمة",hdesc:"لعبة أمثال وكلمات بالعربي والإنجليزي. أكمل المثل، اكتشف معناه، وخذ لحظة لعقلك كل يوم.",
       xname:"النقطة الجاية",xdesc:"أشتغل عليها الحين. تابعني وتعرف وش هي أول بأول.",follow:"تابعني",
       ik:"الفكرة",idea:"نقاط فكرة بسيطة: كل تطبيق نقطة في نسيج أفكاري. <span>نقطة لشي يهمني، ونقطة لشي أحبه، ونقطة لشي ودّي يصير أسهل.</span> والتقنية اليوم قرّبت صنعها.",
@@ -350,7 +354,7 @@ footer .relief.wide{margin-inline:0}
       sub:"Nuqat makes clear, easy Saudi apps. The first is Gurb.",
       cta:"Meet the apps",strip:"Gurb is out now on the App Store and Google Play",hint:"Each coloured dot is an app",
       ak:"The dots so far",ah:"Small apps for ordinary days.",anote:"Each app here came from something I lived or something I love. Some are out now, some are on the way.",
-      gname:"Gurb",gslogan:"However far you go, stay close to the people who love you.",gdesc:"One tap a day tells the people who love you that you're okay. If you miss it, the people you chose get an alert.",gnote:"Gurb adds peace of mind to your day and to staying in touch with your family.",gdisc:"Gurb is not an emergency service or a medical alert system. In an emergency, call your local emergency services.",gring:"One tap every 24 hours",
+      gname:"Gurb",gslogan:"However far you go, stay close to the people who love you.",gdesc:"One tap a day tells the people who love you that you're okay. If you miss it, the people you chose get an alert.",gmore:"More about Gurb",gnote:"Gurb adds peace of mind to your day and to staying in touch with your family.",gdisc:"Gurb is not an emergency service or a medical alert system. In an emergency, call your local emergency services.",gring:"One tap every 24 hours",
       soon:"Coming soon",hname:"Hikmah",hdesc:"A game of proverbs and words in Arabic and English. Finish the proverb, find its meaning, and give your mind a moment every day.",
       xname:"The next dot",xdesc:"I'm working on it now. Follow along and you'll see it first.",follow:"Follow along",
       ik:"The idea",idea:"Nuqat is a simple idea: every app is a dot in the fabric of my thoughts. <span>One for something I care about, one for something I love, one for something I wish were easier.</span> Today's technology puts making them within reach.",
