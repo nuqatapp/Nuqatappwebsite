@@ -80,12 +80,12 @@ export function SiteHeader({ nav }: { nav?: ReactNode }) {
   return (
     <header className="w-full">
       <div className="max-w-6xl mx-auto px-5 sm:px-8 py-4 flex items-center justify-between gap-4">
-        <Link href="/" className={`flex items-center gap-3 ${focusRing}`} data-testid="link-home">
+        <a href="/" className={`flex items-center gap-3 ${focusRing}`} data-testid="link-home">
           <NuqatLogo height={40} />
           <span className="font-arabic text-2xl font-bold text-primary leading-none" data-testid="text-title">
             نقاط
           </span>
-        </Link>
+        </a>
         {nav && <nav aria-label="أقسام الصفحة">{nav}</nav>}
       </div>
     </header>

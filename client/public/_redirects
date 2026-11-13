@@ -1,1 +1,4 @@
-/*  /index.html  200
+# Home page: the static Nuqat landing (client/public/landing). Forced so it wins over index.html.
+/            /landing/index.html   200!
+# Everything else, including /gurb, /gurb/support and every /:app/privacy-ar|en page, stays on the React app.
+/*           /index.html           200

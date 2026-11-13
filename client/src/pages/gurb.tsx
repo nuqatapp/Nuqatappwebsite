@@ -63,14 +63,14 @@ export default function GurbPage() {
     <div className="min-h-screen bg-background text-foreground flex flex-col" dir="rtl" lang="ar">
       <SiteHeader
         nav={
-          <Link
+          <a
             href="/"
             className={`font-arabic text-base font-medium inline-flex items-center gap-1 hover:text-primary transition-colors ${focusRing}`}
             data-testid="link-back-home"
           >
             نقاط
             <ArrowLeft className="w-4 h-4" aria-hidden="true" />
-          </Link>
+          </a>
         }
       />
 
