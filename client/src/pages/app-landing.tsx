@@ -100,12 +100,12 @@ export default function AppLanding() {
         <div className="text-center" dir="rtl">
           <h1 className="text-2xl font-bold text-primary mb-4 font-arabic">التطبيق غير موجود</h1>
           <p className="text-muted-foreground mb-6 font-arabic">لم نتمكن من العثور على هذا التطبيق</p>
-          <Link href="/">
+          <a href="/">
             <Button className="font-arabic gap-2">
               <ArrowRight className="w-4 h-4" />
               العودة للرئيسية
             </Button>
-          </Link>
+          </a>
         </div>
       </div>
     );
@@ -119,12 +119,12 @@ export default function AppLanding() {
     <div className="min-h-screen bg-background flex flex-col">
       <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between" dir="rtl">
-          <Link href="/">
+          <a href="/">
             <Button variant="ghost" size="sm" className="gap-2 font-arabic" data-testid="button-back-home">
               <ArrowRight className="w-4 h-4" />
               نقاط
             </Button>
-          </Link>
+          </a>
           {hasPlayStore ? (
             <a href={app.playStoreUrl} target="_blank" rel="noopener noreferrer">
               <Button size="sm" className="gap-2 font-arabic" data-testid="button-download-header">

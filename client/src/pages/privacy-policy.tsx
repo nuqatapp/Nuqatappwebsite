@@ -260,7 +260,7 @@ export function PrivacyPolicyAR() {
       <div className="min-h-screen bg-background flex items-center justify-center" dir="rtl">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-primary mb-4 font-arabic">الصفحة غير موجودة</h1>
-          <Link href="/"><Button className="font-arabic gap-2"><ArrowRight className="w-4 h-4" />العودة للرئيسية</Button></Link>
+          <a href="/"><Button className="font-arabic gap-2"><ArrowRight className="w-4 h-4" />العودة للرئيسية</Button></a>
         </div>
       </div>
     );
@@ -327,7 +327,7 @@ export function PrivacyPolicyEN() {
       <div className="min-h-screen bg-background flex items-center justify-center" dir="ltr">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-primary mb-4">Page Not Found</h1>
-          <Link href="/"><Button className="gap-2"><ArrowLeft className="w-4 h-4" />Back to Home</Button></Link>
+          <a href="/"><Button className="gap-2"><ArrowLeft className="w-4 h-4" />Back to Home</Button></a>
         </div>
       </div>
     );
