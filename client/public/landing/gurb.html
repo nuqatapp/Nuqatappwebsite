@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>قرب | مهما تبعد، خلك قرب اللي يحبونك</title>
+<meta name="description" content="قرب: ضغطة واحدة كل يوم تطمّن اللي يحبونك إنك بخير. وإذا فاتتك، يوصل تنبيه للأشخاص اللي اخترتهم.">
+<meta name="theme-color" content="#FBFAEB">
+<link rel="canonical" href="https://nuqat.app/gurb">
+<meta property="og:title" content="قرب | مهما تبعد، خلك قرب اللي يحبونك">
+<meta property="og:description" content="قرب: ضغطة واحدة كل يوم تطمّن اللي يحبونك إنك بخير. وإذا فاتتك، يوصل تنبيه للأشخاص اللي اخترتهم.">
+<meta property="og:image" content="https://nuqat.app/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:url" content="https://nuqat.app/gurb">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="قرب | مهما تبعد، خلك قرب اللي يحبونك">
+<meta name="twitter:description" content="قرب: ضغطة واحدة كل يوم تطمّن اللي يحبونك إنك بخير. وإذا فاتتك، يوصل تنبيه للأشخاص اللي اخترتهم.">
+<meta name="twitter:image" content="https://nuqat.app/og-image.png">
+
+<link rel="icon" type="image/png" href="/landing/assets/img/favicon-256.png">
+<link rel="apple-touch-icon" href="/landing/assets/img/favicon-256.png">
+<link rel="preload" href="/landing/assets/fonts/ibm-plex-sans-arabic-arabic-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.classList.add('js')</script>
+<style>
+html,body{background:#FBFAEB;color:#424844;margin:0}
+
+@font-face{font-family:"Plex Arabic";src:url(/landing/assets/fonts/ibm-plex-sans-arabic-arabic-400-normal.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0600-06FF,U+0750-077F,U+0870-08FF,U+FB50-FDFF,U+FE70-FEFF,U+200C-200E}
+@font-face{font-family:"Plex Arabic";src:url(/landing/assets/fonts/ibm-plex-sans-arabic-arabic-600-normal.woff2) format("woff2");font-weight:600;font-display:swap;unicode-range:U+0600-06FF,U+0750-077F,U+0870-08FF,U+FB50-FDFF,U+FE70-FEFF,U+200C-200E}
+@font-face{font-family:"DM Sans";src:url(/landing/assets/fonts/dm-sans-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"DM Sans";src:url(/landing/assets/fonts/dm-sans-latin-600-normal.woff2) format("woff2");font-weight:600;font-display:swap}
+
+:root{
+  --ivory:56 67% 95%; --raised:54 52% 92%; --char:140 4% 27%; --burg:334 63% 20%; --ochre:29 50% 46%;
+  --ease:cubic-bezier(.22,1,.36,1); --ease-s:cubic-bezier(.4,0,.2,1);
+  --gutter:clamp(20px,4.4vw,64px);
+  --font:"Plex Arabic","DM Sans",system-ui,sans-serif;
+}
+html[lang=en]{--font:"DM Sans",system-ui,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{overflow-x:clip;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;scroll-behavior:smooth}
+body{font-family:var(--font);font-size:18px;line-height:1.85;overflow-x:clip}
+html[lang=en] body{font-size:17px;line-height:1.55}
+:lang(ar),:lang(ar) *{letter-spacing:0!important}
+::selection{background:hsl(var(--burg)/.18)}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
+:focus-visible{outline:2px solid hsl(var(--burg));outline-offset:3px;border-radius:12px}
+.ltr{direction:ltr;unicode-bidi:isolate}
+h1,h2,h3{color:hsl(var(--burg));font-weight:600;margin:0}
+
+/* nav */
+.nav{position:absolute;inset-block-start:0;inset-inline:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px var(--gutter)}
+.mark{display:flex;align-items:center;gap:12px;color:hsl(var(--burg))}
+.mark img{display:block;height:56px;width:auto}
+.mark b{font-family:"Plex Arabic",sans-serif;font-weight:600;font-size:28px;line-height:1}
+
+
+.links{display:flex;gap:34px;font-size:15px}
+.links a{color:hsl(var(--char)/.75);transition:color .25s var(--ease-s)}
+.links a:hover{color:hsl(var(--burg))}
+.nav-end{display:flex;align-items:center;gap:10px}
+.lang{height:42px;min-width:54px;padding:0 15px;border-radius:999px;border:1px solid hsl(var(--char)/.18);font-size:14px;font-weight:600;transition:background .25s var(--ease-s)}
+.lang:hover{background:hsl(var(--char)/.06)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 28px;border-radius:999px;background:hsl(var(--burg));color:hsl(var(--ivory));font-size:16px;font-weight:600;white-space:nowrap;transition:transform .2s var(--ease-s),background .25s var(--ease-s);box-shadow:0 1px 2px hsl(var(--burg)/.2),0 8px 20px -6px hsl(var(--burg)/.45)}
+.btn:hover{background:hsl(334 63% 26%)}
+.btn:active{transform:scale(.97)}
+.btn.sm{height:42px;padding:0 20px;font-size:14.5px}
+.link-arrow{display:inline-flex;align-items:center;gap:12px;font-size:16px;font-weight:600;color:hsl(var(--burg))}
+.disc{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;border:1px solid hsl(var(--burg)/.25);transition:transform .3s var(--ease),background .3s var(--ease-s),color .3s var(--ease-s)}
+.link-arrow:hover .disc{background:hsl(var(--burg));color:hsl(var(--ivory));transform:translateX(var(--nudge,-3px))}
+html[lang=en] .link-arrow{--nudge:3px}
+.arrow{width:16px;height:16px;flex:none}
+[dir=rtl] .arrow{transform:scaleX(-1)}
+
+/* hero */
+.hero{position:relative;min-height:100vh;min-height:100dvh;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);align-items:center;padding:120px var(--gutter) 110px;overflow:hidden}
+.hero-text{position:relative;z-index:4;max-width:660px}
+.hero-text .hero-relief{display:block;width:calc(100% + var(--gutter));max-width:none;height:auto;margin-top:44px;margin-right:calc(var(--gutter) * -1)!important}
+html[dir=ltr] .hero-text .hero-relief{width:100%;margin-right:0!important}
+.eyebrow{display:flex;align-items:center;gap:10px;margin:0 0 24px;font-size:15.5px;font-weight:600;color:hsl(var(--char)/.7)}
+html[lang=en] .eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.dot{width:8px;height:8px;border-radius:50%;background:hsl(var(--ochre));flex:none}
+h1{font-size:clamp(40px,5.2vw,82px);line-height:1.28}
+html[lang=en] h1{font-size:clamp(40px,4.2vw,68px);line-height:1.06;letter-spacing:-.035em}
+@media (min-width:901px){html[lang=en] h1 .l{white-space:nowrap}}
+h1 .l{display:block}
+h1 .l2{color:hsl(var(--burg)/.55)}
+.sub{margin:26px 0 0;max-width:31rem;font-size:19px;color:hsl(var(--char)/.85)}
+html[lang=en] .sub{font-size:18px;max-width:30rem}
+.ctas{display:flex;flex-wrap:wrap;align-items:center;gap:14px 30px;margin-top:38px}
+.strip{position:absolute;z-index:4;inset-inline-start:var(--gutter);bottom:44px;display:flex;align-items:center;gap:10px;font-size:14px;color:hsl(var(--char)/.65)}
+html[lang=en] .strip{font-size:13.5px}
+.strip .dot{background:hsl(var(--burg))}
+
+/* dot field */
+.field-wrap{position:absolute;inset-block:0;inset-inline-end:0;width:58%}
+.field{position:absolute;z-index:1;inset:0;
+  -webkit-mask-image:radial-gradient(ellipse 72% 70% at 50% 50%,#000 55%,transparent 100%);mask-image:radial-gradient(ellipse 72% 70% at 50% 50%,#000 55%,transparent 100%)}
+.field canvas{position:absolute;inset:0;width:100%;height:100%}
+.apps-layer{position:absolute;z-index:3;inset:0;pointer-events:none}
+.appdot{position:absolute;pointer-events:auto;display:flex;align-items:center;gap:12px;transform:translate(-11px,-11px);opacity:0;scale:.6;transition:opacity .5s var(--ease),scale .6s var(--ease)}
+.appdot.in{opacity:1;scale:1}
+[dir=rtl] .appdot{flex-direction:row-reverse}
+.appdot .lab{direction:inherit}
+.appdot .c{width:22px;height:22px;border-radius:50%;flex:none;transition:transform .35s var(--ease);box-shadow:0 0 0 6px hsl(var(--ivory)),0 4px 14px hsl(var(--char)/.18)}
+.appdot.gurb .c{background:hsl(var(--burg))}
+.appdot.hikmah .c{background:hsl(var(--ochre))}
+.appdot.next .c{background:hsl(var(--ivory));border:2px dashed hsl(var(--burg)/.55);box-shadow:0 0 0 6px hsl(var(--ivory))}
+.appdot:hover .c,.appdot:focus-visible .c,.appdot.open .c{transform:scale(1.18)}
+.appdot .lab{display:flex;flex-direction:column;align-items:flex-start;padding:8px 14px;border-radius:16px;background:hsl(var(--ivory));box-shadow:0 0 0 1px hsl(var(--char)/.08),0 6px 20px -8px hsl(var(--char)/.25);text-align:start;white-space:nowrap}
+.appdot .nm{font-size:15px;font-weight:600;color:hsl(var(--burg));line-height:1.4}
+.appdot .st{font-size:12.5px;color:hsl(var(--char)/.62);line-height:1.4}
+.appdot .more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s var(--ease)}
+.appdot .more span{overflow:hidden;white-space:normal;width:0;font-size:13.5px;line-height:1.6;color:hsl(var(--char)/.85);transition:width .4s var(--ease)}
+.appdot:hover .more span,.appdot:focus-visible .more span,.appdot.open .more span{width:210px}
+.appdot:hover .more,.appdot:focus-visible .more,.appdot.open .more{grid-template-rows:1fr}
+.appdot:hover .more span,.appdot:focus-visible .more span,.appdot.open .more span{padding-top:6px}
+.field-hint{position:absolute;z-index:3;bottom:44px;inset-inline-end:var(--gutter);font-size:13px;color:hsl(var(--char)/.5);display:flex;align-items:center;gap:8px}
+.field-hint i{width:6px;height:6px;border-radius:50%;background:hsl(var(--burg))}
+
+/* entrance */
+.js .rise{animation:rise .9s var(--ease) both;animation-delay:var(--d,0s)}
+@keyframes rise{from{opacity:0;transform:translateY(24px);filter:blur(10px)}}
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:var(--d,0s)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* sections */
+section.block{padding:clamp(96px,10vw,150px) var(--gutter)}
+#apps{padding-top:clamp(28px,3vw,48px)}
+.kicker{display:flex;align-items:center;gap:10px;margin:0 0 16px;font-size:15px;font-weight:600;color:hsl(var(--char)/.65)}
+html[lang=en] .kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+h2{font-size:clamp(32px,3.8vw,56px);line-height:1.3}
+html[lang=en] h2{line-height:1.05;letter-spacing:-.03em}
+.apps-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px 40px;margin-bottom:clamp(40px,5vw,64px)}
+.apps-head p{margin:0;max-width:26rem;color:hsl(var(--char)/.75)}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+.card{border-radius:32px;padding:clamp(26px,3vw,40px);position:relative;overflow:hidden}
+.gurb-card{grid-column:span 12;background:hsl(var(--char));color:hsl(var(--ivory));display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:24px 32px;align-items:center;min-height:420px;padding-bottom:0}
+.gurb-card h3{color:hsl(var(--ivory));font-size:clamp(40px,4.4vw,64px);line-height:1.15;display:flex;align-items:baseline;gap:14px}
+html[lang=en] .gurb-card h3 small{display:none}
+.gurb-card h3 small{font-family:"DM Sans",sans-serif;font-size:16px;font-weight:600;color:hsl(var(--ivory)/.55);letter-spacing:.02em}
+.slogan{margin:18px 0 0;font-size:clamp(22px,2.2vw,30px);font-weight:600;line-height:1.55;color:hsl(var(--ivory))}
+html[lang=en] .slogan{line-height:1.25;letter-spacing:-.015em}
+.gurb-card .gnote{margin:14px 0 0;max-width:32rem;font-size:16.5px;color:hsl(var(--ivory)/.92);border-inline-start:2px solid hsl(var(--ochre));padding-inline-start:14px}
+.gurb-card .gdisc{margin:22px 0 0;max-width:34rem;font-size:13px;line-height:1.7;color:hsl(var(--ivory)/.6)}
+.gurb-card .desc{margin:16px 0 0;max-width:32rem;color:hsl(var(--ivory)/.72);font-size:17px}
+.stores{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.store{display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 22px;border-radius:999px;border:1px solid hsl(var(--ivory)/.25);font-size:15px;font-weight:600;transition:background .25s var(--ease-s),color .25s var(--ease-s)}
+.store:hover{background:hsl(var(--ivory));color:hsl(var(--char))}
+.gmore{display:inline-flex;align-items:center;gap:8px;height:48px;padding:0 10px;font-size:15px;font-weight:600;color:hsl(var(--ivory));text-decoration:underline;text-underline-offset:6px;text-decoration-color:hsl(var(--ivory)/.4);transition:text-decoration-color .25s var(--ease-s)}
+.gmore:hover{text-decoration-color:hsl(var(--ivory))}
+.gmore:focus-visible{outline-color:hsl(var(--ivory))}
+.screens{position:relative;display:flex;align-items:center;justify-content:center;direction:ltr;padding:10px 0 36px}
+.screens::before{content:"";position:absolute;inset:14% 14% 18%;border-radius:50%;background:radial-gradient(closest-side,rgba(104,173,154,.28),transparent);filter:blur(30px)}
+.sc{position:relative;display:block;height:auto;border-radius:22px;box-shadow:0 0 0 1px hsl(0 0% 100%/.1),0 26px 50px -22px rgba(0,0,0,.8)}
+.sc.main{width:46%;max-width:240px;z-index:2}
+.sc.side{width:33%;max-width:172px;opacity:.92;transition:transform 1.1s var(--ease) .2s,opacity .8s ease .2s}
+.sc.s1{margin-right:-7%;transform:translateY(22px)}
+.sc.s2{margin-left:-7%;transform:translateY(22px)}
+.js .gurb-card:not(.in) .sc.s1{transform:translate(40%,22px) scale(.9);opacity:0}
+.js .gurb-card:not(.in) .sc.s2{transform:translate(-40%,22px) scale(.9);opacity:0}
+.cband{grid-column:1/-1;display:block;width:min(760px,100%);height:auto;margin:4px calc(clamp(26px,3vw,40px) * -1) 0 auto;mix-blend-mode:lighten;
+  -webkit-mask-image:linear-gradient(to left,#000 0,#000 40%,transparent 100%);mask-image:linear-gradient(to left,#000 0,#000 40%,transparent 100%)}
+.hikmah-card{grid-column:span 7;background:hsl(var(--raised));box-shadow:inset 0 0 0 1px hsl(var(--char)/.06);min-height:300px;display:flex;flex-direction:column}
+.next-card{grid-column:span 5;border:1.5px dashed hsl(var(--burg)/.3);min-height:300px;display:flex;flex-direction:column}
+.card .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:auto;padding-bottom:40px}
+.chip{display:inline-flex;align-items:center;gap:8px;height:32px;padding:0 14px;border-radius:999px;font-size:13.5px;font-weight:600;background:hsl(var(--ivory));box-shadow:inset 0 0 0 1px hsl(var(--char)/.1)}
+.bigdot{width:44px;height:44px;border-radius:50%;flex:none}
+.hikmah-card .bigdot{background:hsl(var(--ochre))}
+.next-card .bigdot{border:2px dashed hsl(var(--burg)/.5)}
+.card h3.t{font-size:clamp(28px,2.6vw,38px);line-height:1.3}
+html[lang=en] .card h3.t{line-height:1.1;letter-spacing:-.02em}
+.card p.d{margin:10px 0 0;color:hsl(var(--char)/.78);max-width:30rem}
+.card .go{margin-top:22px}
+
+.idea{margin-inline:var(--gutter);padding-inline:0!important;padding-top:clamp(56px,6vw,90px)!important}
+.relief{display:block;height:auto;margin-inline-start:auto;margin-inline-end:0;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 24%,#000 76%,transparent 100%),linear-gradient(to left,#000 0,#000 30%,transparent 92%);mask-image:linear-gradient(to bottom,transparent 0,#000 24%,#000 76%,transparent 100%),linear-gradient(to left,#000 0,#000 30%,transparent 92%);-webkit-mask-composite:source-in;mask-composite:intersect}
+.relief{margin-left:auto!important;margin-right:0!important}
+.relief.narrow{width:min(760px,92%);margin-top:calc(clamp(96px,10vw,150px) * -0.55)}
+.relief.wide{width:min(960px,100%);margin-top:8px}
+.idea p.big{margin:0;max-width:24em;font-size:clamp(26px,3vw,44px);font-weight:600;line-height:1.7;color:hsl(var(--burg))}
+html[lang=en] .idea p.big{line-height:1.3;letter-spacing:-.02em;max-width:22em}
+.idea p.big span{color:hsl(var(--char)/.55)}
+
+footer{padding:clamp(72px,8vw,110px) var(--gutter) 0;border-top:1px solid hsl(var(--char)/.1);margin-inline:var(--gutter);padding-inline:0}
+footer .relief.wide{margin-right:calc(var(--gutter) * -1)!important;width:min(960px,calc(100% + var(--gutter)))}
+.follow{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:28px}
+.socials{display:flex;flex-wrap:wrap;gap:10px}
+.social{display:inline-flex;align-items:center;gap:10px;height:46px;padding:0 18px;border-radius:999px;border:1px solid hsl(var(--char)/.15);font-size:14.5px;transition:background .25s var(--ease-s),border-color .25s var(--ease-s)}
+.social:hover{background:hsl(var(--raised));border-color:hsl(var(--char)/.3)}
+.social b{font-weight:600;color:hsl(var(--burg))}
+.social span{color:hsl(var(--char)/.6)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding:48px 0 32px;font-size:14px;color:hsl(var(--char)/.6)}
+.foot a:hover{color:hsl(var(--burg))}
+.foot nav{display:flex;gap:24px}
+.relief-note{margin:0;padding:0 0 28px;font-size:13px;color:hsl(var(--char)/.55)}
+footer .relief.wide{margin-inline:0}
+
+@media (max-width:1100px){.hikmah-card,.next-card{grid-column:span 6}}
+@media (max-width:900px){
+  .links{display:none}
+  .hero{grid-template-columns:1fr;align-items:start;padding-bottom:0;min-height:0}
+  .field-wrap{position:relative;inset:auto;width:auto;height:420px;margin-inline:calc(var(--gutter) * -1);margin-top:12px}
+  .strip,.field-hint{position:static}
+  .strip{margin:8px 0 40px}
+  .field-hint{justify-content:center;margin-top:-20px}
+  .gurb-card{grid-template-columns:1fr}
+  .screens{max-width:440px;margin-inline:auto;width:100%}
+}
+@media (max-width:640px){
+  .nav{padding-block:18px}
+  .nav .btn.sm{display:none}
+  .hero{padding-top:104px}
+  .ctas{flex-direction:column;align-items:stretch}
+  .ctas .link-arrow{justify-content:center}
+  .hikmah-card,.next-card{grid-column:span 12}
+  .appdot:hover .more span,.appdot:focus-visible .more span,.appdot.open .more span{width:165px}
+  .follow{flex-direction:column;align-items:start}
+  .foot{flex-direction:column}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rise{animation:none}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  *,*::before,*::after{transition-duration:0s!important;transition-delay:0s!important}
+}
+</style>
+<style>
+/* Gurb page: built on the home page styles above */
+.page-top{padding:clamp(104px,9vw,128px) var(--gutter) 0}
+.gurb-card .gname{display:flex;align-items:center;gap:14px;margin:0;font-size:clamp(28px,2.6vw,36px);font-weight:600;line-height:1.2;color:hsl(var(--ivory))}
+.gurb-card .gname img{width:56px;height:56px;border-radius:16px;background:#fff;padding:6px;object-fit:contain}
+.gurb-card h1{color:hsl(var(--ivory));font-size:clamp(34px,3.8vw,56px);line-height:1.35;margin-top:26px;max-width:14ch}
+.page-top .gurb-card{min-height:560px}
+.shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,48px);list-style:none;margin:0;padding:0}
+.shots li{display:flex;flex-direction:column;align-items:center;text-align:center}
+.shots img{display:block;width:100%;max-width:250px;height:auto;border-radius:24px;box-shadow:0 0 0 1px hsl(var(--char)/.08),0 26px 50px -24px hsl(var(--char)/.55)}
+.shots h3{font-size:22px;margin-top:24px}
+.shots p{margin:6px 0 0;max-width:24ch;color:hsl(var(--char)/.78);font-size:16.5px;line-height:1.8}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;list-style:none;margin:clamp(32px,4vw,48px) 0 0;padding:0}
+.steps .card{background:hsl(var(--raised));box-shadow:inset 0 0 0 1px hsl(var(--char)/.06);min-height:220px;display:flex;flex-direction:column}
+.steps .n{font-size:30px;font-weight:600;color:hsl(var(--ochre));line-height:1}
+.steps h3{font-size:clamp(22px,2vw,28px);margin-top:auto;padding-top:36px}
+.steps p{margin:8px 0 0;color:hsl(var(--char)/.78)}
+.why-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px}
+.why-links a{display:inline-flex;align-items:center;gap:10px;height:46px;padding:0 20px;border-radius:999px;border:1px solid hsl(var(--char)/.15);font-size:15px;font-weight:600;color:hsl(var(--burg));transition:background .25s var(--ease-s),border-color .25s var(--ease-s)}
+.why-links a:hover{background:hsl(var(--raised));border-color:hsl(var(--char)/.3)}
+@media (max-width:900px){.page-top .gurb-card{min-height:0}}
+@media (max-width:760px){.shots{grid-template-columns:1fr;gap:48px}.shots img{max-width:190px}.steps{grid-template-columns:1fr}.steps .card{min-height:0}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <a class="mark rise" href="/" aria-label="نقاط، الصفحة الرئيسية"><img src="/landing/assets/img/nuqat-logo.webp" alt="" width="99" height="56"><b>نقاط</b></a>
+  <nav class="links rise" style="--d:.05s" aria-label="الأقسام">
+    <a href="/#apps">التطبيقات</a>
+    <a href="#how">كيف يشتغل؟</a>
+    <a href="#follow">تابعني</a>
+  </nav>
+  <div class="nav-end rise" style="--d:.1s">
+    <a class="btn sm" href="#download">حمّل قرب</a>
+  </div>
+</header>
+
+<main>
+  <section class="page-top" aria-labelledby="gurb-h1">
+    <article class="card gurb-card reveal" id="download">
+      <div>
+        <p class="gname rise" style="--d:.12s"><img src="/gurb-icon-512.png" alt="أيقونة تطبيق قرب" width="56" height="56">قرب</p>
+        <h1 id="gurb-h1" class="rise" style="--d:.24s">مهما تبعد، خلك قرب اللي يحبونك</h1>
+        <p class="desc rise" style="--d:.4s">ضغطة واحدة كل يوم تطمّن اللي يحبونك إنك بخير. وإذا فاتتك، يوصل تنبيه للأشخاص اللي اخترتهم.</p>
+        <p class="gnote rise" style="--d:.5s">قرب يضيف طمأنينة ليومك وتواصلك مع أهلك.</p>
+        <div class="stores rise" style="--d:.6s">
+          <a class="store" href="https://apps.apple.com/us/app/gurb/id6759164131" rel="noopener"><span class="ltr">App Store</span><svg class="arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="store" href="https://play.google.com/store/apps/details?id=sa.nuqat.gurb" rel="noopener"><span class="ltr">Google Play</span><svg class="arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <p class="gdisc rise" style="--d:.7s">قرب ليس خدمة طوارئ أو نظام تنبيه طبي. في حالات الطوارئ، اتصل بخدمات الطوارئ المحلية.</p>
+      </div>
+      <div class="screens" role="group" aria-label="لقطات من تطبيق قرب">
+        <img class="sc side s1" src="/landing/assets/img/gurb-backers.webp" width="600" height="1300" alt="شاشة السند: الأشخاص اللي يوصلهم التنبيه">
+        <img class="sc main" src="/landing/assets/img/gurb-checkin.webp" width="600" height="1300" alt="شاشة قرب: زر تسجيل الحضور والوقت المتبقي">
+        <img class="sc side s2" src="/landing/assets/img/gurb-care.webp" width="600" height="1300" alt="شاشة رعايتي: اللي أنت سند لهم وآخر تسجيل">
+      </div>
+      <img class="cband" src="/landing/assets/img/band-charcoal.webp" width="1123" height="117" alt="" aria-hidden="true">
+    </article>
+  </section>
+
+  <section class="block" aria-labelledby="screens-h">
+    <h2 id="screens-h" class="kicker reveal" style="margin-bottom:clamp(36px,4vw,56px)"><span class="dot"></span><span>شاشات التطبيق</span></h2>
+    <ul class="shots">
+      <li class="reveal"><img src="/landing/assets/img/gurb-checkin.webp" width="600" height="1300" loading="lazy" alt="شاشة قرب: زر تسجيل الحضور والوقت المتبقي"><h3>قرب</h3><p>زر تسجيل الحضور، والوقت المتبقي قبل نهاية اليوم.</p></li>
+      <li class="reveal" style="--d:.1s"><img src="/landing/assets/img/gurb-backers.webp" width="600" height="1300" loading="lazy" alt="شاشة السند: قائمة الأشخاص الموثوقين"><h3>السند</h3><p>الأشخاص اللي اخترتهم، واللي يوصلهم التنبيه إذا فاتك التسجيل.</p></li>
+      <li class="reveal" style="--d:.2s"><img src="/landing/assets/img/gurb-care.webp" width="600" height="1300" loading="lazy" alt="شاشة رعايتي: من تسندهم وآخر تسجيل لهم"><h3>رعايتي</h3><p>اللي أنت سند لهم، وآخر تسجيل حضور لكل واحد منهم.</p></li>
+    </ul>
+  </section>
+
+  <section class="block" id="how" aria-labelledby="how-h" style="padding-top:0">
+    <p class="kicker reveal"><span class="dot"></span><span>الخطوات</span></p>
+    <h2 id="how-h" class="reveal" style="--d:.08s">كيف يشتغل؟</h2>
+    <ol class="steps">
+      <li class="card reveal"><span class="n" aria-hidden="true">١</span><h3>سجّل حضورك</h3><p>ضغطة وحدة كل يوم تقول إنك بخير.</p></li>
+      <li class="card reveal" style="--d:.1s"><span class="n" aria-hidden="true">٢</span><h3>اختر سندك</h3><p>الأشخاص اللي تبيهم يطمنّون عليك.</p></li>
+      <li class="card reveal" style="--d:.2s"><span class="n" aria-hidden="true">٣</span><h3>وإذا فاتتك</h3><p>يوصلهم تنبيه إنك ما سجّلت اليوم.</p></li>
+    </ol>
+  </section>
+
+  <img class="relief narrow" src="/landing/assets/img/relief-narrow-fade.webp" width="1194" height="180" alt="" aria-hidden="true" loading="lazy">
+  <section class="block idea" id="why" aria-labelledby="why-k">
+    <p class="kicker reveal" id="why-k"><span class="dot"></span><span>ليش قرب؟</span></p>
+    <p class="big reveal" style="--d:.1s">فيه ناس يهمّهم يعرفون إنك بخير، كل يوم. <span>وفيه أيام تمر مزحومة وتنسى تطمّنهم.</span> قرب يسدّ هذي المسافة الصغيرة بضغطة وحدة.</p>
+    <div class="why-links reveal" style="--d:.2s">
+      <a href="/gurb/privacy-ar">سياسة الخصوصية</a>
+      <a href="/gurb/privacy-en" class="ltr" lang="en">Privacy Policy</a>
+      <a href="/gurb/support">دعم قرب</a>
+    </div>
+  </section>
+</main>
+
+<footer id="follow">
+  <div class="follow">
+    <div>
+      <p class="kicker"><span class="dot"></span><span data-t="fk">تابعني</span></p>
+      <h2 data-t="fh">أي نقطة تطلع، تشوفها هناك أول.</h2>
+    </div>
+    <div class="socials">
+      <a class="social" href="https://www.tiktok.com/@nuqat.app" rel="noopener"><b class="ltr">TikTok</b><span class="ltr">@nuqat.app</span></a>
+      <a class="social" href="https://www.instagram.com/nuqat.app" rel="noopener"><b class="ltr">Instagram</b><span class="ltr">nuqat.app</span></a>
+      <a class="social" href="https://www.snapchat.com/add/nuqatapp" rel="noopener"><b class="ltr">Snapchat</b><span class="ltr">nuqatapp</span></a>
+      <a class="social" href="https://x.com/nuqatapp" rel="noopener"><b class="ltr">X</b><span class="ltr">@nuqatapp</span></a>
+    </div>
+  </div>
+  <div class="foot">
+    <span>© 2026 <span data-t="brand">نقاط</span> · <span class="ltr">nuqat.app</span></span>
+    <nav aria-label="Legal"><a id="support" href="/gurb/support" data-t="support">دعم قرب</a><a id="privacy" href="/gurb/privacy-ar">سياسة خصوصية قرب</a></nav>
+  </div>
+  <img class="relief wide" src="/landing/assets/img/relief-medium-fade.webp" width="1194" height="273" alt="" aria-hidden="true" loading="lazy">
+  <p class="relief-note" data-t="reliefNote">النقش مستوحى من زخارف أبواب ونوافذ الباحة.</p>
+</footer>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll(".reveal"));
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:.15});
+    els.forEach(function(el){io.observe(el)});
+  } else els.forEach(function(el){el.classList.add("in")});
+})();
+</script>
+</body>
+</html>

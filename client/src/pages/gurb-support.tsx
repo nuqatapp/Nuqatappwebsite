@@ -150,10 +150,10 @@ export default function GurbSupport() {
     <div lang={language} dir={direction} className={`min-h-screen bg-background text-foreground ${isArabic ? "font-arabic" : "font-sans"}`}>
       <div className="mx-auto max-w-[1280px] px-6 sm:px-10 lg:px-12">
         <header className="flex items-center justify-between gap-4 pt-6 sm:pt-8" dir="ltr">
-          <Link href="/gurb" className="inline-flex min-h-11 items-center gap-2 rounded-md text-sm text-primary/75 transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-4" dir={direction}>
+          <a href="/gurb" className="inline-flex min-h-11 items-center gap-2 rounded-md text-sm text-primary/75 transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-4" dir={direction}>
             <BackArrow className="h-4 w-4" aria-hidden="true" />
             {copy.back}
-          </Link>
+          </a>
 
           <nav aria-label="Language / اللغة" className="inline-flex shrink-0 rounded-full border border-primary/25 bg-card/50 p-1">
             {(["ar", "en"] as const).map((option) => (
