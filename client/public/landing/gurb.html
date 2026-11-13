@@ -235,7 +235,8 @@ footer .relief.wide{margin-inline:0}
 .gurb-card .gname{display:flex;align-items:center;gap:14px;margin:0;font-size:clamp(28px,2.6vw,36px);font-weight:600;line-height:1.2;color:hsl(var(--ivory))}
 .gurb-card .gname img{width:56px;height:56px;border-radius:16px;background:#fff;padding:6px;object-fit:contain}
 .gurb-card h1{color:hsl(var(--ivory));font-size:clamp(34px,3.8vw,56px);line-height:1.35;margin-top:26px;max-width:14ch}
-.page-top .gurb-card{min-height:560px}
+.page-top .gurb-hero{grid-template-columns:minmax(0,1fr);min-height:0;padding-top:clamp(36px,4.5vw,64px)}
+.gurb-hero .desc,.gurb-hero .gnote{max-width:40rem}
 .shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,48px);list-style:none;margin:0;padding:0}
 .shots li{display:flex;flex-direction:column;align-items:center;text-align:center}
 .shots img{display:block;width:100%;max-width:250px;height:auto;border-radius:24px;box-shadow:0 0 0 1px hsl(var(--char)/.08),0 26px 50px -24px hsl(var(--char)/.55)}
@@ -268,7 +269,7 @@ footer .relief.wide{margin-inline:0}
 
 <main>
   <section class="page-top" aria-labelledby="gurb-h1">
-    <article class="card gurb-card reveal" id="download">
+    <article class="card gurb-card gurb-hero reveal" id="download">
       <div>
         <p class="gname rise" style="--d:.12s"><img src="/gurb-icon-512.png" alt="أيقونة تطبيق قرب" width="56" height="56">قرب</p>
         <h1 id="gurb-h1" class="rise" style="--d:.24s">مهما تبعد، خلك قرب اللي يحبونك</h1>
@@ -279,11 +280,6 @@ footer .relief.wide{margin-inline:0}
           <a class="store" href="https://play.google.com/store/apps/details?id=sa.nuqat.gurb" rel="noopener"><span class="ltr">Google Play</span><svg class="arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
         <p class="gdisc rise" style="--d:.7s">قرب ليس خدمة طوارئ أو نظام تنبيه طبي. في حالات الطوارئ، اتصل بخدمات الطوارئ المحلية.</p>
-      </div>
-      <div class="screens" role="group" aria-label="لقطات من تطبيق قرب">
-        <img class="sc side s1" src="/landing/assets/img/gurb-backers.webp" width="600" height="1300" alt="شاشة السند: الأشخاص اللي يوصلهم التنبيه">
-        <img class="sc main" src="/landing/assets/img/gurb-checkin.webp" width="600" height="1300" alt="شاشة قرب: زر تسجيل الحضور والوقت المتبقي">
-        <img class="sc side s2" src="/landing/assets/img/gurb-care.webp" width="600" height="1300" alt="شاشة رعايتي: اللي أنت سند لهم وآخر تسجيل">
       </div>
       <img class="cband" src="/landing/assets/img/band-charcoal.webp" width="1123" height="117" alt="" aria-hidden="true">
     </article>
