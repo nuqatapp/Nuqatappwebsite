@@ -270,12 +270,12 @@ export function PrivacyPolicyAR() {
     <div className="min-h-screen bg-background" dir="rtl">
       <div className="max-w-3xl mx-auto px-4 py-8">
         <div className="mb-8">
-          <Link href={`/${data.slug}`}>
+          <a href={`/${data.slug}`}>
             <Button variant="ghost" size="sm" className="gap-2 font-arabic" data-testid="button-back">
               <ArrowRight className="w-4 h-4" />
               العودة لصفحة التطبيق
             </Button>
-          </Link>
+          </a>
         </div>
 
         <article className="prose prose-slate max-w-none">
@@ -337,12 +337,12 @@ export function PrivacyPolicyEN() {
     <div className="min-h-screen bg-background" dir="ltr">
       <div className="max-w-3xl mx-auto px-4 py-8">
         <div className="mb-8">
-          <Link href={`/${data.slug}`}>
+          <a href={`/${data.slug}`}>
             <Button variant="ghost" size="sm" className="gap-2" data-testid="button-back">
               <ArrowLeft className="w-4 h-4" />
               Back to App
             </Button>
-          </Link>
+          </a>
         </div>
 
         <article className="prose prose-slate max-w-none">

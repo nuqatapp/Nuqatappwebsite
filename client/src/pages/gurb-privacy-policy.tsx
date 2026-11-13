@@ -837,10 +837,10 @@ export default function GurbPrivacyPolicy({ language }: { language: "ar" | "en" 
       <div className="max-w-3xl mx-auto px-4 py-8">
         <div className="mb-8">
           <Button asChild variant="ghost" size="sm" className={`gap-2 ${isArabic ? "font-arabic" : ""}`} data-testid="button-back">
-            <Link href="/gurb">
+            <a href="/gurb">
               <BackArrow className="w-4 h-4" aria-hidden="true" />
               {policy.back}
-            </Link>
+            </a>
           </Button>
         </div>
 
