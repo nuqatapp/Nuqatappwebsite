@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>نقاط | تطبيقات بسيطة ليومك</title>
-<meta name="description" content="نقاط: تطبيقات بسيطة ليومك. كل تطبيق نقطة، ولكل نقطة حكاية. أول تطبيق: قرب.">
+<meta name="description" content="نقاط: تطبيقات سعودية بسيطة ليومك. أول تطبيقاتنا قرب: ضغطة واحدة كل يوم تطمّن اللي يحبونك.">
 <meta name="theme-color" content="#FBFAEB">
 <link rel="canonical" href="https://nuqat.app/">
 <meta property="og:title" content="نقاط | تطبيقات بسيطة ليومك">
-<meta property="og:description" content="كل تطبيق نقطة، ولكل نقطة حكاية. أول تطبيق: قرب.">
+<meta property="og:description" content="تطبيقات سعودية بسيطة ليومك. أول تطبيقاتنا قرب.">
 <meta property="og:image" content="https://nuqat.app/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -17,7 +17,7 @@
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="نقاط | تطبيقات بسيطة ليومك">
-<meta name="twitter:description" content="كل تطبيق نقطة، ولكل نقطة حكاية. أول تطبيق: قرب.">
+<meta name="twitter:description" content="تطبيقات سعودية بسيطة ليومك. أول تطبيقاتنا قرب.">
 <meta name="twitter:image" content="https://nuqat.app/og-image.png">
 
 <link rel="icon" type="image/png" href="/landing/assets/img/favicon-256.png">
@@ -78,6 +78,8 @@ html[lang=en] .link-arrow{--nudge:3px}
 /* hero */
 .hero{position:relative;min-height:100vh;min-height:100dvh;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);align-items:center;padding:120px var(--gutter) 110px;overflow:hidden}
 .hero-text{position:relative;z-index:4;max-width:660px}
+.hero-text .hero-relief{display:block;width:calc(100% + var(--gutter));max-width:none;height:auto;margin-top:44px;margin-right:calc(var(--gutter) * -1)!important}
+html[dir=ltr] .hero-text .hero-relief{width:100%;margin-right:0!important}
 .eyebrow{display:flex;align-items:center;gap:10px;margin:0 0 24px;font-size:15.5px;font-weight:600;color:hsl(var(--char)/.7)}
 html[lang=en] .eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase}
 .dot{width:8px;height:8px;border-radius:50%;background:hsl(var(--ochre));flex:none}
@@ -141,6 +143,8 @@ html[lang=en] .gurb-card h3 small{display:none}
 .gurb-card h3 small{font-family:"DM Sans",sans-serif;font-size:16px;font-weight:600;color:hsl(var(--ivory)/.55);letter-spacing:.02em}
 .slogan{margin:18px 0 0;font-size:clamp(22px,2.2vw,30px);font-weight:600;line-height:1.55;color:hsl(var(--ivory))}
 html[lang=en] .slogan{line-height:1.25;letter-spacing:-.015em}
+.gurb-card .gnote{margin:14px 0 0;max-width:32rem;font-size:16.5px;color:hsl(var(--ivory)/.92);border-inline-start:2px solid hsl(var(--ochre));padding-inline-start:14px}
+.gurb-card .gdisc{margin:22px 0 0;max-width:34rem;font-size:13px;line-height:1.7;color:hsl(var(--ivory)/.6)}
 .gurb-card .desc{margin:16px 0 0;max-width:32rem;color:hsl(var(--ivory)/.72);font-size:17px}
 .stores{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
 .store{display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 22px;border-radius:999px;border:1px solid hsl(var(--ivory)/.25);font-size:15px;font-weight:600;transition:background .25s var(--ease-s),color .25s var(--ease-s)}
@@ -239,13 +243,14 @@ footer .relief.wide{margin-inline:0}
 <main id="top">
   <section class="hero" aria-labelledby="h1">
     <div class="hero-text">
-      <p class="eyebrow rise" style="--d:.12s"><span class="dot"></span><span data-t="eyebrow">تطبيقات بسيطة ليومك</span></p>
-      <h1 id="h1"><span class="l rise" style="--d:.22s" data-t="h1a">كل تطبيق نقطة،</span><span class="l l2 rise" style="--d:.32s" data-t="h1b">ولكل نقطة حكاية.</span></h1>
-      <p class="sub rise" style="--d:.5s" data-t="sub">أصنع تطبيقات بسيطة لأشياء أحبها وتهمني. ما يجمعها موضوع واحد، يجمعها إنها تخدم يومك بهدوء.</p>
+      <p class="eyebrow rise" style="--d:.12s"><span class="dot"></span><span data-t="eyebrow">كل نقطة تحكي قصة</span></p>
+      <h1 id="h1"><span class="l rise" style="--d:.22s" data-t="h1a">تطبيقات بسيطة</span><span class="l l2 rise" style="--d:.32s" data-t="h1b">ليومك</span></h1>
+      <p class="sub rise" style="--d:.5s" data-t="sub">نقاط تصنع تطبيقات سعودية واضحة وسهلة. أولها قرب.</p>
       <div class="ctas rise" style="--d:.65s">
         <a class="btn" href="#apps" data-t="cta">تعرّف على التطبيقات</a>
         <a class="link-arrow" href="#app-gurb"><span data-t="getgurb">حمّل قرب</span><span class="disc"><svg class="arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
       </div>
+      <img class="relief hero-relief rise" style="--d:.9s" src="/landing/assets/img/relief-narrow-fade.webp" width="1194" height="180" alt="" aria-hidden="true">
     </div>
     <div class="field-wrap">
       <div class="field" aria-hidden="true"><canvas id="fabric"></canvas></div>
@@ -267,12 +272,14 @@ footer .relief.wide{margin-inline:0}
       <article class="card gurb-card reveal" id="app-gurb">
         <div>
           <h3><span data-t="gname">قرب</span><small>Gurb</small></h3>
-          <p class="slogan" data-t="gslogan">مهما تبعد، خلك قرب اللي يحبونك.</p>
-          <p class="desc" data-t="gdesc">لمسة وحدة كل يوم تطمّن اللي يحبونك إنك بخير. وإذا فاتك الموعد، يوصلهم تنبيه. ما يقرأ موقعك ولا يشاركه.</p>
+          <p class="slogan" data-t="gslogan">مهما تبعد، خلك قرب اللي يحبونك</p>
+          <p class="desc" data-t="gdesc">ضغطة واحدة كل يوم تطمّن اللي يحبونك إنك بخير. وإذا فاتتك، يوصل تنبيه للأشخاص اللي اخترتهم.</p>
+          <p class="gnote" data-t="gnote">قرب يضيف طمأنينة ليومك وتواصلك مع أهلك.</p>
           <div class="stores">
             <a class="store" href="https://apps.apple.com/us/app/gurb/id6759164131" rel="noopener"><span class="ltr">App Store</span><svg class="arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
             <a class="store" href="https://play.google.com/store/apps/details?id=sa.nuqat.gurb" rel="noopener"><span class="ltr">Google Play</span><svg class="arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
+          <p class="gdisc" data-t="gdisc">قرب ليس خدمة طوارئ أو نظام تنبيه طبي. في حالات الطوارئ، اتصل بخدمات الطوارئ المحلية.</p>
         </div>
         <div class="screens" role="group" aria-label="لقطات من تطبيق قرب" data-tl="screensLabel">
           <img class="sc side s1" src="/landing/assets/img/gurb-backers.webp" width="600" height="1300" loading="lazy" alt="شاشة السند: الأشخاص اللي يوصلهم التنبيه" data-ta="altBackers">
@@ -333,24 +340,24 @@ footer .relief.wide{margin-inline:0}
 
   var T = {
     ar:{title:"نقاط | تطبيقات بسيطة ليومك",toggle:"EN",toggleLabel:"Switch to English",
-      n1:"التطبيقات",n2:"الفكرة",n3:"تابعني",getgurb:"حمّل قرب",eyebrow:"تطبيقات بسيطة ليومك",
-      h1a:"كل تطبيق نقطة،",h1b:"ولكل نقطة حكاية.",
-      sub:"أصنع تطبيقات بسيطة لأشياء أحبها وتهمني. ما يجمعها موضوع واحد، يجمعها إنها تخدم يومك بهدوء.",
+      n1:"التطبيقات",n2:"الفكرة",n3:"تابعني",getgurb:"حمّل قرب",eyebrow:"كل نقطة تحكي قصة",
+      h1a:"تطبيقات بسيطة",h1b:"ليومك",
+      sub:"نقاط تصنع تطبيقات سعودية واضحة وسهلة. أولها قرب.",
       cta:"تعرّف على التطبيقات",strip:"قرب متوفر الحين على <bdi>App Store</bdi> و<bdi>Google Play</bdi>",hint:"كل نقطة ملوّنة تطبيق",
       ak:"النقاط حتى الآن",ah:"تطبيقات صغيرة، لأيام عادية.",anote:"كل تطبيق هنا جا من شي عشته أو شي أحبه. بعضها متوفر الحين، وبعضها في الطريق.",
-      gname:"قرب",gslogan:"مهما تبعد، خلك قرب اللي يحبونك.",gdesc:"لمسة وحدة كل يوم تطمّن اللي يحبونك إنك بخير. وإذا فاتك الموعد، يوصلهم تنبيه. ما يقرأ موقعك ولا يشاركه.",gring:"لمسة وحدة كل 24 ساعة",
+      gname:"قرب",gslogan:"مهما تبعد، خلك قرب اللي يحبونك",gdesc:"ضغطة واحدة كل يوم تطمّن اللي يحبونك إنك بخير. وإذا فاتتك، يوصل تنبيه للأشخاص اللي اخترتهم.",gnote:"قرب يضيف طمأنينة ليومك وتواصلك مع أهلك.",gdisc:"قرب ليس خدمة طوارئ أو نظام تنبيه طبي. في حالات الطوارئ، اتصل بخدمات الطوارئ المحلية.",gring:"لمسة وحدة كل 24 ساعة",
       soon:"قريباً",hname:"حكمة",hdesc:"لعبة أمثال وكلمات بالعربي والإنجليزي. أكمل المثل، اكتشف معناه، وخذ لحظة لعقلك كل يوم.",
       xname:"النقطة الجاية",xdesc:"أشتغل عليها الحين. تابعني وتعرف وش هي أول بأول.",follow:"تابعني",
       ik:"الفكرة",idea:"نقاط فكرة بسيطة: كل تطبيق نقطة في نسيج أفكاري. <span>نقطة لشي يهمني، ونقطة لشي أحبه، ونقطة لشي ودّي يصير أسهل.</span> والتقنية اليوم قرّبت صنعها.",
       fk:"تابعني",fh:"أي نقطة تطلع، تشوفها هناك أول.",brand:"نقاط",privacy:"سياسة خصوصية قرب",support:"دعم قرب",reliefNote:"النقش مستوحى من زخارف أبواب ونوافذ الباحة.",screensLabel:"لقطات من تطبيق قرب",altBackers:"شاشة السند: الأشخاص اللي يوصلهم التنبيه",altCheckin:"شاشة قرب: زر تسجيل الحضور والوقت المتبقي",altCare:"شاشة رعايتي: اللي أنت سند لهم وآخر تسجيل",
-      dots:{gurb:["قرب","متوفر الحين","تطمّن اللي يحبونك بلمسة وحدة كل يوم."],hikmah:["حكمة","قريباً","لعبة أمثال وكلمات، حكمة صغيرة كل يوم."],next:["النقطة الجاية","أشتغل عليها","تابعني وتعرف وش هي أول بأول."]}},
+      dots:{gurb:["قرب","متوفر الحين","ضغطة واحدة كل يوم تطمّن اللي يحبونك."],hikmah:["حكمة","قريباً","لعبة أمثال وكلمات، حكمة صغيرة كل يوم."],next:["النقطة الجاية","أشتغل عليها","تابعني وتعرف وش هي أول بأول."]}},
     en:{title:"Nuqat | Simple apps for your day",toggle:"عربي",toggleLabel:"التبديل إلى العربية",
-      n1:"Apps",n2:"The idea",n3:"Follow",getgurb:"Get Gurb",eyebrow:"Simple apps for your day",
-      h1a:"Every app is a dot.",h1b:"Every dot, a story.",
-      sub:"I make simple apps for the things I love and care about. They don't share a theme. They share a purpose: to quietly make your day easier.",
+      n1:"Apps",n2:"The idea",n3:"Follow",getgurb:"Get Gurb",eyebrow:"Every dot tells a story",
+      h1a:"Simple apps",h1b:"for your day.",
+      sub:"Nuqat makes clear, easy Saudi apps. The first is Gurb.",
       cta:"Meet the apps",strip:"Gurb is out now on the App Store and Google Play",hint:"Each coloured dot is an app",
       ak:"The dots so far",ah:"Small apps for ordinary days.",anote:"Each app here came from something I lived or something I love. Some are out now, some are on the way.",
-      gname:"Gurb",gslogan:"However far you are, stay close to the people who love you.",gdesc:"One tap a day tells the people who love you that you're okay. Miss it, and they get an alert. It never reads or shares your location.",gring:"One tap every 24 hours",
+      gname:"Gurb",gslogan:"However far you go, stay close to the people who love you.",gdesc:"One tap a day tells the people who love you that you're okay. If you miss it, the people you chose get an alert.",gnote:"Gurb adds peace of mind to your day and to staying in touch with your family.",gdisc:"Gurb is not an emergency service or a medical alert system. In an emergency, call your local emergency services.",gring:"One tap every 24 hours",
       soon:"Coming soon",hname:"Hikmah",hdesc:"A game of proverbs and words in Arabic and English. Finish the proverb, find its meaning, and give your mind a moment every day.",
       xname:"The next dot",xdesc:"I'm working on it now. Follow along and you'll see it first.",follow:"Follow along",
       ik:"The idea",idea:"Nuqat is a simple idea: every app is a dot in the fabric of my thoughts. <span>One for something I care about, one for something I love, one for something I wish were easier.</span> Today's technology puts making them within reach.",
