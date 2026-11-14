@@ -2,6 +2,14 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<script>
+  // Fast lane: nuqat.app/gurb?go=1 sends phones straight to the right store. Without ?go=1 the page shows as normal.
+  if (new URLSearchParams(location.search).get("go") === "1") {
+    var ua = navigator.userAgent || "";
+    if (/iPhone|iPad|iPod/i.test(ua) || (/Macintosh/i.test(ua) && navigator.maxTouchPoints > 1)) location.replace("https://apps.apple.com/app/id6759164131");
+    else if (/Android/i.test(ua)) location.replace("https://play.google.com/store/apps/details?id=sa.nuqat.gurb");
+  }
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>قرب | مهما تبعد، خلك قرب اللي يحبونك</title>
 <meta name="description" content="قرب: ضغطة واحدة كل يوم تطمّن اللي يحبونك إنك بخير. وإذا فاتتك، يوصل تنبيه للأشخاص اللي اخترتهم.">
@@ -9,16 +17,20 @@
 <link rel="canonical" href="https://nuqat.app/gurb">
 <meta property="og:title" content="قرب | مهما تبعد، خلك قرب اللي يحبونك">
 <meta property="og:description" content="قرب: ضغطة واحدة كل يوم تطمّن اللي يحبونك إنك بخير. وإذا فاتتك، يوصل تنبيه للأشخاص اللي اخترتهم.">
-<meta property="og:image" content="https://nuqat.app/og-image.png">
+<meta property="og:image" content="https://nuqat.app/og-gurb.jpg">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="تطبيق قرب: مهما تبعد، خلك قرب اللي يحبونك">
+<meta property="og:site_name" content="نقاط">
 <meta property="og:locale" content="ar_SA">
 <meta property="og:url" content="https://nuqat.app/gurb">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@nuqatapp">
 <meta name="twitter:title" content="قرب | مهما تبعد، خلك قرب اللي يحبونك">
 <meta name="twitter:description" content="قرب: ضغطة واحدة كل يوم تطمّن اللي يحبونك إنك بخير. وإذا فاتتك، يوصل تنبيه للأشخاص اللي اخترتهم.">
-<meta name="twitter:image" content="https://nuqat.app/og-image.png">
+<meta name="twitter:image" content="https://nuqat.app/og-gurb.jpg">
 
 <link rel="icon" type="image/png" href="/landing/assets/img/favicon-256.png">
 <link rel="apple-touch-icon" href="/landing/assets/img/favicon-256.png">
@@ -235,7 +247,8 @@ footer .relief.wide{margin-inline:0}
 .gurb-card .gname{display:flex;align-items:center;gap:14px;margin:0;font-size:clamp(28px,2.6vw,36px);font-weight:600;line-height:1.2;color:hsl(var(--ivory))}
 .gurb-card .gname img{width:56px;height:56px;border-radius:16px;background:#fff;padding:6px;object-fit:contain}
 .gurb-card h1{color:hsl(var(--ivory));font-size:clamp(34px,3.8vw,56px);line-height:1.35;margin-top:26px;max-width:14ch}
-.page-top .gurb-hero{grid-template-columns:minmax(0,1fr);min-height:0;padding-top:clamp(36px,4.5vw,64px)}
+.page-top .gurb-hero{min-height:0;padding-top:clamp(36px,4.5vw,64px)}
+.gurb-hero .screens{padding-top:0}
 .gurb-hero .desc,.gurb-hero .gnote{max-width:40rem}
 .shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,48px);list-style:none;margin:0;padding:0}
 .shots li{display:flex;flex-direction:column;align-items:center;text-align:center}
@@ -280,6 +293,11 @@ footer .relief.wide{margin-inline:0}
           <a class="store" href="https://play.google.com/store/apps/details?id=sa.nuqat.gurb" rel="noopener"><span class="ltr">Google Play</span><svg class="arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
         <p class="gdisc rise" style="--d:.7s">قرب ليس خدمة طوارئ أو نظام تنبيه طبي. في حالات الطوارئ، اتصل بخدمات الطوارئ المحلية.</p>
+      </div>
+      <div class="screens rise" style="--d:.3s" role="group" aria-label="لقطات من تطبيق قرب">
+        <img class="sc side s1" src="/landing/assets/img/gurb-backers.webp" width="600" height="1300" alt="شاشة السند: الأشخاص اللي يوصلهم التنبيه">
+        <img class="sc main" src="/landing/assets/img/gurb-checkin.webp" width="600" height="1300" fetchpriority="high" alt="شاشة قرب: زر تسجيل الحضور والوقت المتبقي">
+        <img class="sc side s2" src="/landing/assets/img/gurb-care.webp" width="600" height="1300" alt="شاشة رعايتي: اللي أنت سند لهم وآخر تسجيل">
       </div>
       <img class="cband" src="/landing/assets/img/band-charcoal.webp" width="1123" height="117" alt="" aria-hidden="true">
     </article>
